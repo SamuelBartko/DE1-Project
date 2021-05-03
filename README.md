@@ -47,7 +47,8 @@ Console for exercise bike/bike, hall sensor, measuring and displaying speed, dis
 		<td class="col0 leftalign"> 7        </td><td class="col1 leftalign"> User LEDs                                </td><td class="col2 leftalign"> 14       </td><td class="col3 leftalign"> FPGA programming mode                 </td><td class="col4 leftalign"> 21       </td><td class="col5 leftalign"> Dialog Semiconductor DA9062 power supply  </td>
 	</tr>
 </table></div>
-
+## The wiring diagram looks like this.
+![]()
 ## VHDL modules description and simulations
 
 ### Modul `hex_7_seg`
