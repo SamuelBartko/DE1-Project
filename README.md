@@ -60,6 +60,13 @@ Console for exercise bike/bike, hall sensor, measuring and displaying speed, dis
 
 ## The wiring diagram looks like this.
 ![Board](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/12.png)\
+### Tables with connections on Board
+| **Hall sensor connector** | **Pin on board** |
+| :-: | :-: |
+| Digital Out | IO1 |
+| Analog Out | A2 |
+| VCC | 5V0 |
+| Ground | GND |
 ***Here we see how does hall sensor work*** \
 ![](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/Webp.net-gifmaker_1.gif)
 
