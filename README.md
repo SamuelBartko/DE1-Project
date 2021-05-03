@@ -56,7 +56,7 @@ Console for exercise bike/bike, hall sensor, measuring and displaying speed, dis
 
 ![Sensor](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/2562.jpg)   
 
-The board Arty A7-35T doesn't have 7 digit display to display infromation or the hall sensor needed for detecing ratations of the bike wheel.
+The board Arty A7-35T doesn't have 7 digit display to display infromation or the hall sensor needed for detecing rotations of the bike wheel.
 So we added these componnents moduls. They are connected to the board through pins show on diagram or in the table.
 
 ## The wiring diagram looks like this.
