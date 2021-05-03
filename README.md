@@ -55,6 +55,7 @@ Console for exercise bike/bike, hall sensor, measuring and displaying speed, dis
 [Link for display ](https://store.digilentinc.com/pmod-ssd-seven-segment-display/)
 
 ![Sensor](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/2562.png)           ![display](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/display.png)
+<img src="https://github.com/SamuelBartko/DE1-Project/blob/main/Images/display.png" width="100" height="100">
 
 
 
