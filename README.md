@@ -56,7 +56,8 @@ Console for exercise bike/bike, hall sensor, measuring and displaying speed, dis
 
 ![Sensor](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/2562.jpg)   
 
-
+The board Arty A7-35T doesn't have 7 digit display to display infromation or the hall sensor needed for detecing ratations of the bike wheel.
+So we added these componnents moduls. They are connected to the board through pins show on diagram or in the table.
 
 ## The wiring diagram looks like this.
 ![Board](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/12.jpg)
@@ -296,7 +297,22 @@ begin
 
 ## TOP module description and simulations
 
-Write your text here.
+The top module implements all modules onto Arty A7-35T board. 
 
+### Schematic of the Top module
+
+![TOP](Images/top.png)
+
+
+### Code of the `top.vhdl` 
+```vhdl
+
+
+
+```
+
+### Screenshot with simulated time waveforms
+
+![Graph](Images/topsim.png)
 
 ## Video
