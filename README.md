@@ -54,7 +54,7 @@ Console for exercise bike/bike, hall sensor, measuring and displaying speed, dis
 [link for hall sensor](https://dratek.cz/arduino/7702-halluv-senzor-modul-ky-024.html?gclid=Cj0KCQjwvr6EBhDOARIsAPpqUPFmX-NV1Sm-jNOxffSL-m0-NFdAKmShf-2nILrmdBjUIOiNXTs1npMaAtw9EALw_wcB)\
 [Link for display ](https://store.digilentinc.com/pmod-ssd-seven-segment-display/)
 
-![Sensor](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/2562.png)             ![display](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/display.png)
+![Sensor](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/2562.png) =250x250             ![display](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/display.png)
 
 
 
