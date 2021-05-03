@@ -16,7 +16,7 @@ Console for exercise bike/bike, hall sensor, measuring and displaying speed, dis
 
 ## Hardware description
 
-### Board used for this is Arty A7: Artix-7. The picture under shows the board with marked components. 
+### (1).Board used for this is Arty A7: Artix-7. The picture under shows the board with marked components. 
 ![Board](Images/arty-a7.png)
 
 <div class="table sectionedit3"><table class="inline">
@@ -47,6 +47,9 @@ Console for exercise bike/bike, hall sensor, measuring and displaying speed, dis
 		<td class="col0 leftalign"> 7        </td><td class="col1 leftalign"> User LEDs                                </td><td class="col2 leftalign"> 14       </td><td class="col3 leftalign"> FPGA programming mode                 </td><td class="col4 leftalign"> 21       </td><td class="col5 leftalign"> Dialog Semiconductor DA9062 power supply  </td>
 	</tr>
 </table></div>
+### (2).Hall sensor (module KY-024)
+[link](https://dratek.cz/arduino/7702-halluv-senzor-modul-ky-024.html?gclid=Cj0KCQjwvr6EBhDOARIsAPpqUPFmX-NV1Sm-jNOxffSL-m0-NFdAKmShf-2nILrmdBjUIOiNXTs1npMaAtw9EALw_wcB)
+![Sensor](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/2562.png)
 
 ## The wiring diagram looks like this.
 ![Board](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/12.png)
