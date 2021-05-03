@@ -59,7 +59,9 @@ Console for exercise bike/bike, hall sensor, measuring and displaying speed, dis
 
 
 ## The wiring diagram looks like this.
-![Board](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/12.png)![](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/Webp.net-gifmaker_1.gif)
+![Board](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/12.png)
+***Here we see how does hall sensor work***
+![](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/Webp.net-gifmaker_1.gif)
 
 
 ## VHDL modules description and simulations
