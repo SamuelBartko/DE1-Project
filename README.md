@@ -1066,7 +1066,9 @@ end Behavioral;
 
 ### What can be added in Future?
 ***If we want add something to the console of the stationary bike it can be Heart Pulse Sensor. This sensor will detect pulses of heart, and display it on 7 segment display after some button is clicked.
-The principle of the heart sensor is shown on picture bellow.  Under the picture there is another one which shows new connection of the sensor to the board.***
+The principle of the heart sensor is shown on picture bellow.  Under the picture there is another one which shows new connection of the sensor to the board.
+And we can add function that will display burned calories. It would be counted form distance traveled.
+***
 
 ![](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/tep_dokopyyy.jpg)
 ![](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/projekt_-_schema__srdce_tep.jpg)
