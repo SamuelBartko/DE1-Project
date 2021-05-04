@@ -88,7 +88,7 @@ So we added these componnents moduls. They are connected to the board through pi
 
 ## VHDL modules description and simulations
 
-### (1).Modul `clock_enable`
+### (1.) Modul `clock_enable`
 ```vhdl
 
 ---------------------------------------------------------------------------
@@ -145,7 +145,7 @@ begin
 end architecture behavioral;
 ```
 
-### (2).Modul `driver_7seg_4digits`
+### (2.) Modul `driver_7seg_4digits`
 ```vhdl
 
 ------------------------------------------------------------------------
@@ -265,7 +265,7 @@ begin
     end architecture Behavioral;
 ```
 
-### (3).Modul `cnt_up_down`
+### (3.) Modul `cnt_up_down`
 ```vhdl
 library ieee;
 use ieee.std_logic_1164.all;
@@ -332,7 +332,7 @@ end architecture behavioral;
 
 ```
 
-### (4).Modul `hex_7seg`
+### (4.) Modul `hex_7seg`
 ```vhdl
 ----------------------------------------------------------------------------------
 
@@ -407,7 +407,7 @@ end architecture Behavioral;
 
 ```
 
-### (5).Modul `timer_enable`
+### (5.) Modul `timer_enable`
 ```vhdl
 
 library IEEE;
@@ -773,7 +773,7 @@ end Behavioral;
 ### Simulation  `tb_hall_sensor `
 ![](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/hall%20sensor%20all.png)
 ![](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/hall%20sensor%20part.png)
-### (2).test `tb_driver `
+### (2.) test `tb_driver `
 ```vhdl
 ----------------------------------------------------------------------------------
 --tb_driver
