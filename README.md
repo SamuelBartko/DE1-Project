@@ -78,66 +78,58 @@ So we added these componnents moduls. They are connected to the board through pi
 ### Modul `hex_7_seg`
 ```vhdl
 
+---------------------------------------------------------------------------
+---clock_enable
+---------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
-entity hex_7seg is
-    Port ( 
-           hex_i : in STD_LOGIC_VECTOR  (4 - 1 downto 0); --Input binary data
-           seg_o : out STD_LOGIC_VECTOR (7 - 1 downto 0)  --Cathode values in the order A, B, C, D, E, F, G
-         );
-end hex_7seg;
+entity clock_enable is
+    generic(
+        g_MAX : natural := 10       -- Number of clk pulses to generate                                   
+    );  
+    port(
+        clk    : in  std_logic;      -- Main clock
+        reset  : in  std_logic;      -- Synchronous reset
+        ce_o   : out std_logic       -- Clock enable pulse signal
+    );
+end entity clock_enable;
 
-architecture Behavioral of hex_7seg is
+------------------------------------------------------------------------
+-- Architecture body for clock enable
+------------------------------------------------------------------------
+architecture behavioral of clock_enable is
+     -- Local counter
+    signal s_cnt_local : natural;
 
 begin
-
---------------------------------------------------------------------
-    -- p_7seg_decoder:
-    -- A combinational process for 7-segment display decoder. 
-    -- Any time "hex_i" is changed, the process is "executed".
-    -- Output pin seg_o(6) corresponds to segment A, seg_o(5) to B, etc.
     --------------------------------------------------------------------
-    p_7seg_decoder : process(hex_i)
+    -- p_clk_ena:
+    -- Generate clock enable signal. By default, enable signal is low 
+    -- and generated pulse is always one clock long.
+    --------------------------------------------------------------------
+    p_clk_ena : process(clk)
     begin
-        case hex_i is
-            when "0000" =>
-                seg_o <= "0000001";     -- 0
-            when "0001" =>
-                seg_o <= "1001111";     -- 1
-            when "0010" =>
-                seg_o <= "0010010";     -- 2
-            when "0011" =>
-                seg_o <= "0000110";     -- 3
-            when "0100" =>
-                seg_o <= "1001100";     -- 4
-            when "0101" =>
-                seg_o <= "0100100";     -- 5
-            when "0110" =>
-                seg_o <= "0100000";     -- 6
-            when "0111" =>
-                seg_o <= "0011111";     -- 7
-            when "1000" =>
-                seg_o <= "0000000";     -- 8
-            when "1001" =>
-                seg_o <= "0000100";     -- 9
-            when "1010" =>
-                seg_o <= "0001000";     -- A
-            when "1011" =>
-                seg_o <= "1100000";     -- B
-            when "1100" =>
-                seg_o <= "0110001";     -- C
-            when "1101" =>
-                seg_o <= "1000010";     -- D        
-            when "1110" =>
-                seg_o <= "0110000";     -- E
-            when others =>
-                seg_o <= "0111000";     -- F
-        end case;
-    end process p_7seg_decoder;
+        if rising_edge(clk) then                        -- Synchronous process
 
-end Behavioral;
+            if (reset = '1') then                       -- High active reset
+                s_cnt_local <= 0;                       -- Clear local counter
+                ce_o        <= '0';                     -- Set output to low
 
+           -- Test number of clock periods
+            elsif (s_cnt_local >= (g_MAX - 1)) then
+                s_cnt_local  <= 0;                      -- Clear local counter
+                ce_o         <= '1';                    -- Generate clock enable pulse
+
+            else
+                s_cnt_local <= s_cnt_local + 1;
+                ce_o        <= '0';
+            end if;
+        end if;
+    end process p_clk_ena;
+
+end architecture behavioral;
 ```
 
 ### Modul `driver_7seg_4digits`
