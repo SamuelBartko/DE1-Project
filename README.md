@@ -1050,9 +1050,11 @@ end Behavioral;
 ### Simulation  `tb_top `
 ![](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/test%20top.png)
  
-### Schematic of the Top module
+### How it will looks like in the future.
+***we can add***
 
-![TOP](Images/top.png)
+![](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/tep_dokopyyy.jpg)
+![](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/projekt_-_schema__srdce_tep.jpg)
 
 
 
