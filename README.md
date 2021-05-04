@@ -1049,17 +1049,14 @@ end Behavioral;
 ### Simulation  `tb_top `
 ![](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/test%20top.png)
  
-### How it will looks like in the future.
-***we can add***
+
+### What can be added in Future?
+***If we want add something to the console of the stationary bike it can be Heart Pulse Sensor. This sensor will detect pulses of heart, and display it on 7 segment display after some button is clicked.
+The principle of the heart sensor is shown on picture bellow.  Under the picture there is another one which shows new connection of the sensor to the board.***
 
 ![](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/tep_dokopyyy.jpg)
 ![](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/projekt_-_schema__srdce_tep.jpg)
 
 
-
-
-### Screenshot with simulated time waveforms
-
-![Graph](Images/topsim.png)
 
 ## Video
