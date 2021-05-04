@@ -546,6 +546,19 @@ end Behavioral;
 ```
 ### (7).Modul `top`
 ```vhdl
+
+```
+## TOP module description and simulations
+
+The top module implements all modules onto Arty A7-35T board. 
+
+### Schematic of the Top module
+
+![TOP](Images/top.png)
+
+
+### Code of the `top.vhdl` 
+```vhdl
 ----------------------------------------------------------------------------------
 -- top
 ----------------------------------------------------------------------------------
@@ -625,19 +638,6 @@ begin
         );
 
 end architecture Behavioral;
-
-```
-## TOP module description and simulations
-
-The top module implements all modules onto Arty A7-35T board. 
-
-### Schematic of the Top module
-
-![TOP](Images/top.png)
-
-
-### Code of the `top.vhdl` 
-```vhdl
 
 
 
