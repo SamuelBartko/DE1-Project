@@ -71,6 +71,20 @@ So we added these componnents moduls. They are connected to the board through pi
 ***On animation below, you can see how does hall sensor work*** \
 ![](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/Webp.net-gifmaker_1.gif)
 
+### Tables with connections for Seven segment display on Board
+| 7 segment connectors | Pin on board |
+| :-: | :-: |
+| AA | D13 |
+| AB | B18 |
+| AC | K16 |
+| AD | J17 |
+| UCC | VCC |
+| GND| GND |
+| AE | J17 |
+| AF | J18 |
+| AG | K15 |
+| CAT | J15 |
+| CAT | G2 |
 
 ## VHDL modules description and simulations
 
