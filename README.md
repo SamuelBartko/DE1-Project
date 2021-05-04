@@ -75,7 +75,7 @@ So we added these componnents moduls. They are connected to the board through pi
 
 ## VHDL modules description and simulations
 
-### Modul `clock_enable`
+### (1).Modul `clock_enable`
 ```vhdl
 
 ---------------------------------------------------------------------------
@@ -132,17 +132,10 @@ begin
 end architecture behavioral;
 ```
 
-### Modul `driver_7seg_4digits`
+### (2).Modul `driver_7seg_4digits`
 ```vhdl
 
 ------------------------------------------------------------------------
---
--- Driver for 4-digit 7-segment display.
--- Nexys A7-50T, Vivado v2020.1.1, EDA Playground
---
--- Copyright (c) 2020 Tomas Fryza
--- Dept. of Radio Electronics, Brno University of Technology, Czechia
--- This work is licensed under the terms of the MIT license.
 --
 ------------------------------------------------------------------------
 
@@ -169,7 +162,8 @@ entity driver_7seg_4digits is
         -- Cathode values for individual segments
         seg_o   : out std_logic_vector(7 - 1 downto 0);
         -- Common anode signals to individual displays
-        dig_o   : out std_logic_vector(4 - 1 downto 0)
+        dig0_o   : out std_logic_vector;
+		dig1_o   : out std_logic_vector
     );
 end entity driver_7seg_4digits;
 
@@ -232,61 +226,407 @@ begin
     p_mux : process(s_cnt, data0_i, data1_i, data2_i, data3_i, dp_i)
     begin
         case s_cnt is
-            when "11" =>
-                s_hex <= data3_i;
-                dp_o  <= dp_i(3);
-                dig_o <= "0111";
+            when "11"  =>
+                s_hex  <= data3_i;
+                dp_o   <= dp_i(3);
+                dig1_o <= "1";
+				
 
             when "10" =>
                 s_hex <= data2_i;
                 dp_o  <= dp_i(2);
-                dig_o <= "1011";
+                dig1_o <= "0";
 
             when "01" =>
                 s_hex <= data1_i;
                 dp_o  <= dp_i(1);
-                dig_o <= "1101";
+				dig0_o <= "1";
 
             when others =>
                 s_hex <= data0_i;
                 dp_o  <= dp_i(0);
-                dig_o <= "1110";
+                dig0_o <= "0";
                 
         end case;
     end process p_mux;
     end architecture Behavioral;
+```
+
+### (3).Modul `cnt_up_down`
+```vhdl
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+------------------------------------------------------------------------
+-- Entity declaration for n-bit counter
+------------------------------------------------------------------------
+entity cnt_up_down is
+    generic(
+        g_CNT_WIDTH : natural := 4      -- Number of bits for counter
+    );
+    port(
+        clk      : in  std_logic;       -- Main clock
+        reset    : in  std_logic;       -- Synchronous reset
+        en_i     : in  std_logic;       -- Enable input
+        cnt_up_i : in  std_logic;       -- Direction of the counter
+        cnt_o    : out std_logic_vector(g_CNT_WIDTH - 1 downto 0)
+    );
+end entity cnt_up_down;
+
+------------------------------------------------------------------------
+-- Architecture body for n-bit counter
+------------------------------------------------------------------------
+architecture behavioral of cnt_up_down is
+
+    -- Local counter
+    signal s_cnt_local : unsigned(g_CNT_WIDTH - 1 downto 0);
+
+begin
+    --------------------------------------------------------------------
+    -- p_cnt_up_down:
+    -- Clocked process with synchronous reset which implements n-bit 
+    -- up/down counter.
+    --------------------------------------------------------------------
+    p_cnt_up_down : process(clk)
+    begin
+        if rising_edge(clk) then
+        
+            if (reset = '1') then               -- Synchronous reset
+                s_cnt_local <= (others => '0'); -- Clear all bits
+
+            elsif (en_i = '1') then       -- Test if counter is enabled
+
+
+            if (cnt_up_i = '1') then
+                s_cnt_local <= s_cnt_local + 1;
+                    
+            elsif (cnt_up_i = '0') then
+                s_cnt_local <= s_cnt_local - 1;
+                
+             end if;
+
+            end if;
+        end if;
+    end process p_cnt_up_down;
+
+    -- Output must be retyped from "unsigned" to "std_logic_vector"
+    cnt_o <= std_logic_vector(s_cnt_local);
+
+end architecture behavioral;
+
 
 
 ```
 
-### Modul `average`
+### (4).Modul `hex_7seg`
+```vhdl
+----------------------------------------------------------------------------------
+
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+------------------------------------------------------------------------
+-- Entity declaration for 2-bit binary comparator
+------------------------------------------------------------------------
+entity hex_7seg is
+    port
+    (
+        num_i         :  in  integer range 0 to 9999;               --input 
+        seg_o         :  out std_logic_vector(6 downto 0)       --output for cathode      
+    );
+end entity hex_7seg;
+
+------------------------------------------------------------------------
+-- Architecture body for 2-bit binary comparator
+------------------------------------------------------------------------
+architecture Behavioral of hex_7seg is
+begin
+
+    p_7seg_decoder : process(num_i)
+    begin
+    
+        case num_i is
+            when 0 =>
+                seg_o <= "0000001";     -- for 0
+            when 1 =>
+                seg_o <= "1001111";     -- for 1
+            when 2 =>
+                seg_o <= "0010010";     -- for 2
+            when 3 =>
+                seg_o <= "0000110";     -- for 3
+            when 4 =>
+                seg_o <= "1001100";     -- for 4 
+            when 5 =>
+                seg_o <= "0100100";     -- for 5
+            when 6 =>
+                seg_o <= "0100000";     -- for 6 
+            when 7 =>
+                seg_o <= "0001111";     -- for 7
+            when 8 =>
+                seg_o <= "0000000";     -- for 8
+            when 9 =>
+                seg_o <= "0000100";     -- for 9
+                
+             -------|We do not need this |---
+          --when "1010" =>
+              --seg_o <= "0001000";     -- A
+          --when "1011" =>
+              --seg_o <= "1100000";     -- b
+          --when "1100" =>
+              --seg_o <= "0110001";     -- C
+         -- when "1101" =>
+             --seg_o <= "1000010";     -- d
+          --when "1110" =>
+             --seg_o <= "0110000";     -- E
+          --when others =>
+             --seg_o <= "0111000";     -- 
+           ----------------------------------
+            when others =>
+                seg_o <= "1111111";
+        end case;
+        
+    end process p_7seg_decoder;
+
+end architecture Behavioral;
+
+
+```
+
+### (5).Modul `timer_enable`
 ```vhdl
 
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+--use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx leaf cells in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
+entity timer_enable is
+    port(
+        clk        : in  std_logic;
+        reset      : in  std_logic;
+        run        : in  std_logic;
+        runtime    : out integer
+    );
+end entity timer_enable;
+
+------------------------------------------------------------------------
+-- Architecture body for clock enable
+------------------------------------------------------------------------
+architecture Behavioral of timer_enable is
+
+    signal s_runtime : integer;
+    signal timing : integer:=0;
+
+begin
+
+    p_time_ena : process(clk)
+    begin
+         if(timing < 100 and reset = '0') then
+            timing <= timing + 1;
+        elsif(timing = 100 and reset = '0') then 
+            s_runtime <= s_runtime + 1;
+            timing <= 0;
+        elsif (reset = '1') then
+                s_runtime <= 0;
+                timing <= 0;
+        end if;
+        runtime <= s_runtime;
+    end process p_time_ena;
+
+end architecture Behavioral;
 
 
 ```
 
-### Modul `console`
+### (6).Modul `hall_sensor`
 ```vhdl
+----------------------------------------------------------------------------------
+-- hall_sensor
+----------------------------------------------------------------------------------
+
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+-----------------------------------------
+entity hall_sensor is
+    port(
+            clk              : in std_logic;  -- Main clock
+            hall_sensor      : in std_logic;  -- hall signal
+           
+            button_mod       : in std_logic;  -- change mode between speed and distance
+            button_reset     : in std_logic;  -- reset button
+            
+            wheel    : in integer;
+            output_o         : out integer
+        );
+end hall_sensor;
+
+architecture Behavioral of hall_sensor is
+    signal s_speed      : integer:=0;
+    signal s_distance   : integer:=0;           
+    signal s_time       : integer;              --time for rotation
+    signal s_mode       : std_logic;            --mode 0 or 1
+    signal s_reset      : std_logic;            --reset
+    signal s_run        : std_logic;
+      
+
+begin
+
+    time_stop : entity work.timer_enable
+        port map(
+            
+            clk     => clk,
+            reset   => s_reset,
+            runtime => s_time,
+            run     => s_run
+        );
+    measure_distance : process(clk, hall_sensor)    --calculate distance using signal from hall sensor
+    begin
+    
+        if (rising_edge(hall_sensor)) then
+        
+            s_distance <= s_distance + (wheel );
+            
+        end if;
+        
+        if (rising_edge(button_reset)) then
+            s_distance <= 0;
+        end if;
+        
+    end process;
+    measure_speed : process(clk)       --calculate speed using 
+    begin
+    
+        if (s_reset = '1') then 
+            s_reset <= '0';
+        end if;
+    
+        if (rising_edge(hall_sensor)) then
+            s_speed <= (wheel*1000) / (s_time + 1); 
+                 
+            s_reset <= '1';
+        end if;
+        
+    end process;
+    
+
+    change_mod : process(clk)
+    begin
+    
+        if (rising_edge(button_mod)) then
+            s_mode <= not(s_mode);
+        end if;
+  
+        case s_mode is
+            when '1' =>
+                output_o <= s_distance;      
+            when '0' =>
+                output_o <= s_speed;
+            when others =>
+                output_o <= s_distance;
+        end case;
+        
+    end process;
+
+end Behavioral;
 
 
 
 ```
-
-### Modul `distance`
+### (7).Modul `top`
 ```vhdl
+----------------------------------------------------------------------------------
+-- top
+----------------------------------------------------------------------------------
 
 
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+--use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx leaf cells in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
+entity top is
+Port ( 
+    
+           CLK100MHZ         : in STD_LOGIC;
+           button             : in STD_LOGIC_VECTOR (3 downto 0);
+           hall_sensor1        : in STD_LOGIC;
+           
+           CA          : out STD_LOGIC;
+           CB          : out STD_LOGIC;
+           CC          : out STD_LOGIC;
+           CD          : out STD_LOGIC;
+           CE          : out STD_LOGIC;
+           CF          : out STD_LOGIC;
+           CG          : out STD_LOGIC;
+           
+           DP          : out STD_LOGIC;
+           
+           AN          : out STD_LOGIC_VECTOR (3 downto 0)
+           
+    );
+end top;
+
+architecture Behavioral of top is
+    signal s_start  : std_logic;
+    signal s_number : integer;
+    
+
+begin        
+    driver_seg_4 : entity work.driver_7seg
+        port map(
+            clk        => CLK100MHZ,
+            reset      => button(2),
+
+            decimal => s_number,
+
+            dp_i => "1110",
+            dp_o => DP,
+            
+            seg_o(6) => CA,
+            seg_o(5) => CB,
+            seg_o(4) => CC,
+            seg_o(3) => CD,
+            seg_o(2) => CE,
+            seg_o(1) => CF,
+            seg_o(0) => CG,
+            
+            dig_o => AN(4 - 1 downto 0)
+        );
+        
+    hall_sensor : entity work.hall_sensor
+        port map(
+            clk              => CLK100MHZ,
+            hall_sensor      => hall_sensor1,
+            wheel            => 250,                   --250 cm      
+            button_mod       => button(0),
+            button_reset     => button(1),
+            
+
+            output_o         => s_number
+        );
+
+end architecture Behavioral;
 
 ```
-
-### Modul `velocity`
-```vhdl
-
-
-
-```
-
 ## TOP module description and simulations
 
 The top module implements all modules onto Arty A7-35T board. 
