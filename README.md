@@ -2,7 +2,7 @@
 
 ### Team members
 
-* Mohamad Alkana
+* Mohamad Alkanan
 * Tarik Alkanan
 * Dominik Baláž
 * Samuel Bartko
