@@ -859,6 +859,7 @@ end architecture testbench;
 
 ```
 ### Simulation  `tb_driver `
+![](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/driver.png)
 ### (3).test `tb_top `
 ```vhdl
 ----------------------------------------------------------------------------------
