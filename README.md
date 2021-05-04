@@ -75,7 +75,7 @@ So we added these componnents moduls. They are connected to the board through pi
 
 ## VHDL modules description and simulations
 
-### Modul `hex_7_seg`
+### Modul `clock_enable`
 ```vhdl
 
 ---------------------------------------------------------------------------
