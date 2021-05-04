@@ -1088,6 +1088,8 @@ https://www.reichelt.com/de/en/developer-boards-magnetic-hall-sensor-a3141-debo-
 ---------------------------------------------------------------------------------
 https://www.aristutorf.com/index.php?main_page=product_info&products_id=338449
 ---------------------------------------------------------------------------------
+https://extremeelectronics.co.in/microchip-pic-tutorials/using-multiplexed-7-segment-displays-%E2%80%93-pic-microcontroller-tutorial/
+---------------------------------------------------------------------------------
 https://www.rohm.com/electronics-basics/sensor/pulse-sensor
 ---------------------------------------------------------------------------------
 https://community.createlabz.com/knowledgebase/heart-beat-counter-on-raspberry-pi-zero-using-pulse-sensor-and-lcd-display/
