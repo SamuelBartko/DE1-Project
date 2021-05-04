@@ -23,7 +23,8 @@ entity driver_7seg is
         -- 4 bit value input for decimal point
         dp_i    : in  std_logic_vector(4 - 1 downto 0); 
         -- common anode signals output to individual displays
-        dig_o   : out std_logic_vector(4 - 1 downto 0)  
+        dig0_o   : out std_logic_vector;
+		dig1_o   : out std_logic_vector
     );
 end entity driver_7seg;
 
@@ -144,29 +145,30 @@ begin
 -- selecting data for a single digit, a decimal point signal, and 
 -- switches the common anodes of each display.
 --------------------------------------------------------------------
-    p_mux : process(s_cnt, dp_i)
+    p_mux : process(s_cnt, data0_i, data1_i, data2_i, data3_i, dp_i)
     begin
         case s_cnt is
-               when "01" =>
-                s_hex <= s_data1_i;
-                dp_o  <= dp_i(1);
-                dig_o <= "1101";
-                
-               when "10" =>
-                s_hex <= s_data2_i;
-                dp_o  <= dp_i(2);
-                dig_o <= "1011";
-                
-               when "11" =>
-                s_hex <= s_data3_i;
-                dp_o  <= dp_i(3);
-                dig_o <= "0111";
+            when "11"  =>
+                s_hex  <= data3_i;
+                dp_o   <= dp_i(3);
+                dig1_o <= "1";
+				
 
-               when others =>
-                s_hex <= s_data0_i;
+            when "10" =>
+                s_hex <= data2_i;
+                dp_o  <= dp_i(2);
+                dig1_o <= "0";
+
+            when "01" =>
+                s_hex <= data1_i;
+                dp_o  <= dp_i(1);
+				dig0_o <= "1";
+
+            when others =>
+                s_hex <= data0_i;
                 dp_o  <= dp_i(0);
-                dig_o <= "1110";
+                dig0_o <= "0";
+                
         end case;
-    end process p_mux;
 
 end architecture Behavioral;

@@ -27,7 +27,8 @@ architecture testbench of tb_driver is
     signal s_reset      : std_logic;    
     signal s_dp_i       : std_logic_vector(4 - 1 downto 0);
     signal s_seg_o      : std_logic_vector(7 - 1 downto 0);
-    signal s_dig        : std_logic_vector(4 - 1 downto 0);
+    signal s_dig0       : std_logic_vector(0 downto 0);
+    signal s_dig1       : std_logic_vector(0 downto 0);
     signal s_dp_o       : std_logic;
     signal s_decimal    : integer range 0 to 9999;
     
