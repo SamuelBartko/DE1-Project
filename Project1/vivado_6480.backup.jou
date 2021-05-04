@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue May  4 13:55:20 2021
+# Process ID: 6480
+# Current directory: E:/VUT/4 Semester/DE1/Project1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5276 E:\VUT\4 Semester\DE1\Project1\Project1.xpr
+# Log file: E:/VUT/4 Semester/DE1/Project1/vivado.log
+# Journal file: E:/VUT/4 Semester/DE1/Project1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {E:/VUT/4 Semester/DE1/Project1/Project1.xpr}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+launch_simulation
+source hall_sensor.tcl
+close_sim

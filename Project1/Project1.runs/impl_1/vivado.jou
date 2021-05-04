@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue May  4 20:19:46 2021
+# Process ID: 4576
+# Current directory: E:/VUT/4 Semester/DE1/Project1/Project1.runs/impl_1
+# Command line: vivado.exe -log driver_7seg.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source driver_7seg.tcl -notrace
+# Log file: E:/VUT/4 Semester/DE1/Project1/Project1.runs/impl_1/driver_7seg.vdi
+# Journal file: E:/VUT/4 Semester/DE1/Project1/Project1.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source driver_7seg.tcl -notrace

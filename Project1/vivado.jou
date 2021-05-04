@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue May  4 20:09:29 2021
+# Process ID: 12640
+# Current directory: E:/VUT/4 Semester/DE1/Project1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14792 E:\VUT\4 Semester\DE1\Project1\Project1.xpr
+# Log file: E:/VUT/4 Semester/DE1/Project1/vivado.log
+# Journal file: E:/VUT/4 Semester/DE1/Project1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {E:/VUT/4 Semester/DE1/Project1/Project1.xpr}
+update_compile_order -fileset sources_1
+file mkdir E:/VUT/4 Semester/DE1/Project1/Project1.srcs/constrs_1
+file mkdir E:/VUT/4 Semester/DE1/Project1/Project1.srcs/constrs_1
+file mkdir E:/VUT/4 Semester/DE1/Project1/Project1.srcs/constrs_1/new
+file mkdir E:/VUT/4 Semester/DE1/Project1/Project1.srcs/constrs_1/new
+file mkdir E:/VUT/4 Semester/DE1/Project1/Project1.srcs/constrs_1/new
+file mkdir E:/VUT/4 Semester/DE1/Project1/Project1.srcs/constrs_1/new
+file mkdir E:/VUT/4 Semester/DE1/Project1/Project1.srcs/constrs_1
+file mkdir {E:/VUT/4 Semester/DE1/Project1/Project1.srcs/constrs_1/new}
+close [ open {E:/VUT/4 Semester/DE1/Project1/Project1.srcs/constrs_1/new/Arty A7.xdc} w ]
+add_files -fileset constrs_1 {{E:/VUT/4 Semester/DE1/Project1/Project1.srcs/constrs_1/new/Arty A7.xdc}}
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1

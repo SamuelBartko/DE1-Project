@@ -1,0 +1,1513 @@
+/*
+
+Xilinx Vivado v2020.2 (64-bit) [Major: 2020, Minor: 2]
+SW Build: 3064766 on Wed Nov 18 09:12:45 MST 2020
+IP Build: 3064653 on Wed Nov 18 14:17:31 MST 2020
+
+Process ID (PID): 12880
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Tue May 04 14:17:44 CEST 2021
+Time zone: 	Central European Standard Time (Europe/Prague)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 16
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.2 64-bit
+Java home: 	E:/VUT/Vivado/2020.2/tps/win64/jre11.0.2
+Java executable location: 	E:/VUT/Vivado/2020.2/tps/win64/jre11.0.2/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	VTR
+User home directory: C:/Users/VTR
+User working directory: E:/VUT/4 Semester/DE1/Project1
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: E:/VUT/Vivado
+HDI_APPROOT: E:/VUT/Vivado/2020.2
+RDI_DATADIR: E:/VUT/Vivado/2020.2/data
+RDI_BINDIR: E:/VUT/Vivado/2020.2/bin
+
+Vivado preferences file location: C:/Users/VTR/AppData/Roaming/Xilinx/Vivado/2020.2/vivado.xml
+Vivado preferences directory: C:/Users/VTR/AppData/Roaming/Xilinx/Vivado/2020.2/
+Vivado layouts directory: C:/Users/VTR/AppData/Roaming/Xilinx/Vivado/2020.2/data/layouts
+PlanAhead jar file location: 	E:/VUT/Vivado/2020.2/lib/classes/planAhead.jar
+Vivado log file location: 	E:/VUT/4 Semester/DE1/Project1/vivado.log
+Vivado journal file location: 	E:/VUT/4 Semester/DE1/Project1/vivado.jou
+Engine tmp dir: 	E:/VUT/4 Semester/DE1/Project1/.Xil/Vivado-12880-DESKTOP-QCN0JMN
+
+Xilinx Environment Variables
+----------------------------
+XILINX: E:/VUT/Vivado/2020.2/ids_lite/ISE
+XILINX_DSP: E:/VUT/Vivado/2020.2/ids_lite/ISE
+XILINX_HLS: E:/VUT/Vitis_HLS/2020.2
+XILINX_PLANAHEAD: E:/VUT/Vivado/2020.2
+XILINX_VIVADO: E:/VUT/Vivado/2020.2
+XILINX_VIVADO_HLS: E:/VUT/Vivado/2020.2
+
+
+GUI allocated memory:	180 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,029 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bz (cr):  Open Project : addNotify
+// Opening Vivado Project: E:\VUT\4 Semester\DE1\Project1\Project1.xpr. Version: Vivado v2020.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {E:/VUT/4 Semester/DE1/Project1/Project1.xpr} 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 96 MB (+98063kb) [00:00:09]
+// [Engine Memory]: 1,029 MB (+927689kb) [00:00:09]
+// [GUI Memory]: 116 MB (+16440kb) [00:00:09]
+// WARNING: HEventQueue.dispatchEvent() is taking  2192 ms.
+// Tcl Message: open_project {E:/VUT/4 Semester/DE1/Project1/Project1.xpr} 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/VUT/Vivado/2020.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 58 MB. Current time: 5/4/21, 2:17:44 PM CEST
+// Project name: Project1; location: E:/VUT/4 Semester/DE1/Project1; part: xc7a35ticsg324-1L
+dismissDialog("Open Project"); // bz
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// [GUI Memory]: 126 MB (+4148kb) [00:00:14]
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, driver_7seg(Behavioral) (driver_7seg.vhd)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, driver_7seg(Behavioral) (driver_7seg.vhd)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 8); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 9); // D
+// [GUI Memory]: 134 MB (+1363kb) [00:00:33]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_driver(testbench) (tb_driver.vhd)]", 11, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ah
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ah
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top tb_driver [get_filesets sim_1] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top_lib xil_defaultlib [get_filesets sim_1] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sim_1 
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cr):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'tb_driver' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: "xvhdl --incr --relax -prj tb_driver_vhdl.prj" INFO: [VRFC 10-163] Analyzing VHDL file "E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sources_1/new/driver_7seg.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'driver_7seg' INFO: [VRFC 10-163] Analyzing VHDL file "E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sim_1/new/tb_driver.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'tb_driver' 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab -wto 6e9821bcef2a4b76bbb657edf77520af --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_driver_behav xil_defaultlib.tb_driver -log elaborate.log" 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "tb_driver_behav -key {Behavioral:sim_1:Functional:tb_driver} -tclbatch {tb_driver.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2020.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Waveform: addNotify
+// [GUI Memory]: 142 MB (+1096kb) [00:00:54]
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 81 MB. Current time: 5/4/21, 2:18:28 PM CEST
+// Tcl Message: source tb_driver.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: # run 1000ns 
+// Tcl Message: Note: Stimulus process started Time: 0 ps  Iteration: 0  Process: /tb_driver/p_stimulus  File: E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sim_1/new/tb_driver.vhd Note: Stimulus process finished Time: 0 ps  Iteration: 0  Process: /tb_driver/p_stimulus  File: E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sim_1/new/tb_driver.vhd 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_driver_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1017.008 ; gain = 0.000 
+// 'd' command handler elapsed time: 8 seconds
+dismissDialog("Run Simulation"); // e
+selectButton(RDIResource.GraphicalView_ZOOM_FIT, "Waveform Viewer_zoom_fit"); // E
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 82 MB. Current time: 5/4/21, 2:18:30 PM CEST
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // N
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectButton(RDIResource.GraphicalView_ZOOM_IN, "Waveform Viewer_zoom_in"); // E
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 85 MB. Current time: 5/4/21, 2:18:41 PM CEST
+selectButton(RDIResource.GraphicalView_ZOOM_IN, "Waveform Viewer_zoom_in"); // E
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 85 MB. Current time: 5/4/21, 2:18:45 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 95 MB. Current time: 5/4/21, 2:18:45 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 95 MB. Current time: 5/4/21, 2:18:45 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 85 MB. Current time: 5/4/21, 2:18:45 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 85 MB. Current time: 5/4/21, 2:18:45 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 85 MB. Current time: 5/4/21, 2:18:45 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 85 MB. Current time: 5/4/21, 2:18:45 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 85 MB. Current time: 5/4/21, 2:18:45 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 91 MB. Current time: 5/4/21, 2:18:45 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 103 MB. Current time: 5/4/21, 2:18:45 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 85 MB. Current time: 5/4/21, 2:18:46 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 85 MB. Current time: 5/4/21, 2:18:46 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 85 MB. Current time: 5/4/21, 2:18:46 PM CEST
+expandTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, s_seg_o[6:0]]", 4); // a
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+collapseTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, s_seg_o[6:0]]", 4); // a
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, s_seg_o[6:0]]", 4, true, false, false, false, true, false); // a - Popup Trigger - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 85 MB. Current time: 5/4/21, 2:18:52 PM CEST
+selectMenu("Name"); // ah
+selectMenu("Signal Color"); // ah
+selectMenu("Radix"); // ah
+selectMenu("Radix"); // ah
+selectMenuItem((HResource) null, "Octal"); // Y
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 10 seconds
+expandTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, s_dig[3:0]]", 5); // a
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 85 MB. Current time: 5/4/21, 2:19:06 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+collapseTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, s_dig[3:0]]", 5); // a
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, s_dig[3:0]]", 5, true, false, false, false, true, false); // a - Popup Trigger - Node
+selectMenu("Name"); // ah
+selectMenu("Waveform Style"); // ah
+selectMenu("Signal Color"); // ah
+selectMenu("Radix"); // ah
+selectMenuItem((HResource) null, "Octal"); // Y
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 84 MB. Current time: 5/4/21, 2:19:12 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 95 MB. Current time: 5/4/21, 2:19:19 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 85 MB. Current time: 5/4/21, 2:19:19 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 85 MB. Current time: 5/4/21, 2:19:20 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 85 MB. Current time: 5/4/21, 2:19:20 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 85 MB. Current time: 5/4/21, 2:19:20 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 85 MB. Current time: 5/4/21, 2:19:20 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 84 MB. Current time: 5/4/21, 2:19:20 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 85 MB. Current time: 5/4/21, 2:19:20 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 85 MB. Current time: 5/4/21, 2:19:20 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 85 MB. Current time: 5/4/21, 2:19:20 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 85 MB. Current time: 5/4/21, 2:19:20 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 84 MB. Current time: 5/4/21, 2:19:20 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 32 MB. Current time: 5/4/21, 2:19:21 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 100 MB. Current time: 5/4/21, 2:19:21 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 85 MB. Current time: 5/4/21, 2:19:21 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 30 MB. Current time: 5/4/21, 2:19:21 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 103 MB. Current time: 5/4/21, 2:19:21 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 103 MB. Current time: 5/4/21, 2:19:21 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 100 MB. Current time: 5/4/21, 2:19:21 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 85 MB. Current time: 5/4/21, 2:19:21 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 85 MB. Current time: 5/4/21, 2:19:21 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 84 MB. Current time: 5/4/21, 2:19:21 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 95 MB. Current time: 5/4/21, 2:19:21 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 102 MB. Current time: 5/4/21, 2:19:21 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 100 MB. Current time: 5/4/21, 2:19:21 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 113 MB. Current time: 5/4/21, 2:19:21 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 84 MB. Current time: 5/4/21, 2:19:22 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 84 MB. Current time: 5/4/21, 2:19:22 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 97 MB. Current time: 5/4/21, 2:19:22 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 84 MB. Current time: 5/4/21, 2:19:23 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 90 MB. Current time: 5/4/21, 2:19:23 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 85 MB. Current time: 5/4/21, 2:19:23 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 90 MB. Current time: 5/4/21, 2:19:23 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 85 MB. Current time: 5/4/21, 2:19:23 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 85 MB. Current time: 5/4/21, 2:19:23 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,029 MB. GUI used memory: 85 MB. Current time: 5/4/21, 2:19:23 PM CEST
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_CLOSE_WCFG
+// Elapsed time: 17 seconds
+selectButton("OptionPane.button", "Discard"); // JButton
+closeView(RDIResource.RDIViews_WAVEFORM_VIEWER, "Untitled 1*"); // w
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k
+closeTask("Simulation", "Behavioral Simulation - Functional - sim_1 - tb_driver", "DesignTask.SIMULATION");
+// A (cr): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// bz (cr):  Close : addNotify
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+dismissDialog("Confirm Close"); // A
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+dismissDialog("Close"); // bz
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_driver(testbench) (tb_driver.vhd)]", 10, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_driver(testbench) (tb_driver.vhd)]", 10, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_driver(testbench) (tb_driver.vhd)]", 10, true, false, false, false, false, true); // D - Double Click - Node
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// Elapsed time: 91 seconds
+selectCodeEditor("tb_driver.vhd", 269, 282); // bP
+selectCodeEditor("tb_driver.vhd", 35, 344); // bP
+typeControlKey((HResource) null, "tb_driver.vhd", 'v'); // bP
+selectCodeEditor("tb_driver.vhd", 29, 250); // bP
+selectCodeEditor("tb_driver.vhd", 4, 250); // bP
+selectCodeEditor("tb_driver.vhd", 2, 244); // bP
+selectCodeEditor("tb_driver.vhd", 22, 262); // bP
+selectCodeEditor("tb_driver.vhd", 25, 277); // bP
+// Elapsed time: 26 seconds
+selectCodeEditor("tb_driver.vhd", 29, 296); // bP
+selectCodeEditor("tb_driver.vhd", 6, 318); // bP
+selectCodeEditor("tb_driver.vhd", 75, 251); // bP
+selectCodeEditor("tb_driver.vhd", 31, 263); // bP
+selectCodeEditor("tb_driver.vhd", 110, 210); // bP
+selectCodeEditor("tb_driver.vhd", 116, 251); // bP
+// Elapsed time: 33 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "driver_7seg.vhd", 0); // m
+// Elapsed time: 514 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// am (cr): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a
+// bz (cr):  Save Constraints : addNotify
+// TclEventType: DG_GRAPH_STALE
+// e (cr):  Run Simulation : addNotify
+dismissDialog("Save Project"); // am
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'tb_driver' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvhdl --incr --relax -prj tb_driver_vhdl.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [VRFC 10-163] Analyzing VHDL file "E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sim_1/new/tb_driver.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'tb_driver' 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab -wto 6e9821bcef2a4b76bbb657edf77520af --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_driver_behav xil_defaultlib.tb_driver -log elaborate.log" 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "tb_driver_behav -key {Behavioral:sim_1:Functional:tb_driver} -tclbatch {tb_driver.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2020.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// Waveform: addNotify
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,048 MB. GUI used memory: 86 MB. Current time: 5/4/21, 2:31:36 PM CEST
+// Tcl Message: source tb_driver.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: # run 1000ns 
+// Tcl Message: Note: Stimulus process started Time: 0 ps  Iteration: 0  Process: /tb_driver/p_stimulus  File: E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sim_1/new/tb_driver.vhd Note: Stimulus process finished Time: 0 ps  Iteration: 0  Process: /tb_driver/p_stimulus  File: E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sim_1/new/tb_driver.vhd 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_driver_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1104.871 ; gain = 15.969 
+// 'd' command handler elapsed time: 10 seconds
+dismissDialog("Run Simulation"); // e
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+selectButton(RDIResource.GraphicalView_ZOOM_IN, "Waveform Viewer_zoom_in"); // E
+selectButton(RDIResource.GraphicalView_ZOOM_FIT, "Waveform Viewer_zoom_fit"); // E
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 61 seconds
+expandTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, s_dp_i[3:0]]", 2); // a
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,048 MB. GUI used memory: 86 MB. Current time: 5/4/21, 2:32:41 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+expandTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, s_seg_o[6:0]]", 7); // a
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+expandTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, s_dig[3:0]]", 15); // a
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,048 MB. GUI used memory: 87 MB. Current time: 5/4/21, 2:41:40 PM CEST
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,048 MB. GUI used memory: 95 MB. Current time: 5/4/21, 2:51:49 PM CEST
+// Elapsed time: 1144 seconds
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // N
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_CLOSE_WCFG
+closeView(RDIResource.RDIViews_WAVEFORM_VIEWER, "Untitled 2"); // w
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k
+closeTask("Simulation", "Behavioral Simulation - Functional - sim_1 - tb_driver", "DesignTask.SIMULATION");
+// A (cr): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// bz (cr):  Close : addNotify
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+dismissDialog("Confirm Close"); // A
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+dismissDialog("Close"); // bz
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, driver_7seg(Behavioral) (driver_7seg.vhd), clk_en0 : clock_enable(behavioral) (clock_enable.vhd)]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, driver_7seg(Behavioral) (driver_7seg.vhd), clk_en0 : clock_enable(behavioral) (clock_enable.vhd)]", 2, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 141 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb_driver.vhd", 1); // m
+// Elapsed time: 21 seconds
+selectCodeEditor("tb_driver.vhd", 213, 216); // bP
+selectCodeEditor("tb_driver.vhd", 208, 216); // bP
+typeControlKey((HResource) null, "tb_driver.vhd", 'v'); // bP
+selectCodeEditor("tb_driver.vhd", 3, 213); // bP
+selectCodeEditor("tb_driver.vhd", 27, 235); // bP
+// Elapsed time: 18 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "driver_7seg.vhd", 0); // m
+// Elapsed time: 415 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb_driver.vhd", 1); // m
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "driver_7seg.vhd", 0); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb_driver.vhd", 1); // m
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// am (cr): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a
+// bz (cr):  Save Constraints : addNotify
+// TclEventType: DG_GRAPH_STALE
+// e (cr):  Run Simulation : addNotify
+dismissDialog("Save Project"); // am
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'tb_driver' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: "xvhdl --incr --relax -prj tb_driver_vhdl.prj" INFO: [VRFC 10-163] Analyzing VHDL file "E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sim_1/new/tb_driver.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'tb_driver' 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab -wto 6e9821bcef2a4b76bbb657edf77520af --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_driver_behav xil_defaultlib.tb_driver -log elaborate.log" 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "tb_driver_behav -key {Behavioral:sim_1:Functional:tb_driver} -tclbatch {tb_driver.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2020.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// Waveform: addNotify
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,048 MB. GUI used memory: 89 MB. Current time: 5/4/21, 3:02:38 PM CEST
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: source tb_driver.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 1000ns 
+// Tcl Message: Note: Stimulus process started Time: 0 ps  Iteration: 0  Process: /tb_driver/p_stimulus  File: E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sim_1/new/tb_driver.vhd Note: Stimulus process finished Time: 0 ps  Iteration: 0  Process: /tb_driver/p_stimulus  File: E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sim_1/new/tb_driver.vhd 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_driver_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1104.871 ; gain = 0.000 
+// 'd' command handler elapsed time: 8 seconds
+dismissDialog("Run Simulation"); // e
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+selectButton(RDIResource.GraphicalView_ZOOM_IN, "Waveform Viewer_zoom_in"); // E
+selectButton(RDIResource.GraphicalView_ZOOM_FIT, "Waveform Viewer_zoom_fit"); // E
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+expandTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, s_dig[3:0]]", 4); // a
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,048 MB. GUI used memory: 89 MB. Current time: 5/4/21, 3:02:49 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+collapseTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, s_dig[3:0]]", 4); // a
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+expandTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, s_dp_i[3:0]]", 2); // a
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_CLOSE_WCFG
+// Elapsed time: 58 seconds
+closeView(RDIResource.RDIViews_WAVEFORM_VIEWER, "Untitled 3"); // w
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k
+closeTask("Simulation", "Behavioral Simulation - Functional - sim_1 - tb_driver", "DesignTask.SIMULATION");
+// A (cr): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// bz (cr):  Close : addNotify
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+dismissDialog("Confirm Close"); // A
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+dismissDialog("Close"); // bz
+// Elapsed time: 215 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "driver_7seg.vhd", 0); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb_driver.vhd", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "driver_7seg.vhd", 0); // m
+// Elapsed time: 161 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clock_enable.vhd", 2); // m
+selectCodeEditor("clock_enable.vhd", 51, 313); // bP
+selectCodeEditor("clock_enable.vhd", 3, 39); // bP
+selectCodeEditor("clock_enable.vhd", 7, 28); // bP
+// Elapsed time: 123 seconds
+selectCodeEditor("clock_enable.vhd", 379, 127); // bP
+selectCodeEditor("clock_enable.vhd", 459, 114); // bP
+selectCodeEditor("clock_enable.vhd", 6, 109); // bP
+selectCodeEditor("clock_enable.vhd", 153, 177); // bP
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("clock_enable.vhd", 287, 172); // bP
+selectCodeEditor("clock_enable.vhd", 310, 149); // bP
+// Elapsed time: 54 seconds
+selectCodeEditor("clock_enable.vhd", 198, 336); // bP
+selectCodeEditor("clock_enable.vhd", 193, 349); // bP
+// Elapsed time: 54 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb_driver.vhd", 1); // m
+selectCodeEditor("tb_driver.vhd", 130, 145); // bP
+selectCodeEditor("tb_driver.vhd", 131, 213); // bP
+selectCodeEditor("tb_driver.vhd", 119, 146); // bP
+selectCodeEditor("tb_driver.vhd", 192, 249); // bP
+selectCodeEditor("tb_driver.vhd", 72, 230); // bP
+selectCodeEditor("tb_driver.vhd", 186, 176); // bP
+typeControlKey((HResource) null, "tb_driver.vhd", 'c'); // bP
+// Elapsed time: 22 seconds
+selectCodeEditor("tb_driver.vhd", 56, 233); // bP
+typeControlKey((HResource) null, "tb_driver.vhd", 'v'); // bP
+selectCodeEditor("tb_driver.vhd", 1, 232); // bP
+selectCodeEditor("tb_driver.vhd", 245, 234); // bP
+typeControlKey((HResource) null, "tb_driver.vhd", 'c'); // bP
+selectCodeEditor("tb_driver.vhd", 32, 162); // bP
+typeControlKey((HResource) null, "tb_driver.vhd", 'v'); // bP
+selectCodeEditor("tb_driver.vhd", 71, 162); // bP
+selectCodeEditor("tb_driver.vhd", 260, 165); // bP
+selectCodeEditor("tb_driver.vhd", 128, 115); // bP
+typeControlKey((HResource) null, "tb_driver.vhd", 'v'); // bP
+selectCodeEditor("tb_driver.vhd", 21, 125); // bP
+// Elapsed time: 196 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "driver_7seg.vhd", 0); // m
+// Elapsed time: 35 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clock_enable.vhd", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb_driver.vhd", 1); // m
+// Elapsed time: 39 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "driver_7seg.vhd", 0); // m
+// Elapsed time: 71 seconds
+selectCodeEditor("driver_7seg.vhd", 358, 308); // bP
+// Elapsed time: 30 seconds
+selectCodeEditor("driver_7seg.vhd", 458, 308); // bP
+typeControlKey((HResource) null, "driver_7seg.vhd", 'c'); // bP
+selectCodeEditor("driver_7seg.vhd", 336, 333); // bP
+typeControlKey((HResource) null, "driver_7seg.vhd", 'v'); // bP
+selectCodeEditor("driver_7seg.vhd", 337, 345); // bP
+typeControlKey((HResource) null, "driver_7seg.vhd", 'v'); // bP
+selectCodeEditor("driver_7seg.vhd", 339, 363); // bP
+typeControlKey((HResource) null, "driver_7seg.vhd", 'v'); // bP
+// Elapsed time: 17 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, driver_7seg(Behavioral) (driver_7seg.vhd), hex2seg : hex_7seg(Behavioral) (hex_7seg.vhd)]", 3, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, driver_7seg(Behavioral) (driver_7seg.vhd), hex2seg : hex_7seg(Behavioral) (hex_7seg.vhd)]", 3, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("hex_7seg.vhd", 4, 327); // bP
+selectCodeEditor("hex_7seg.vhd", 30, 286); // bP
+selectCodeEditor("hex_7seg.vhd", 21, 292); // bP
+selectCodeEditor("hex_7seg.vhd", 9, 31); // bP
+selectCodeEditor("hex_7seg.vhd", 2, 11); // bP
+selectCodeEditor("hex_7seg.vhd", 9, 36); // bP
+// Elapsed time: 185 seconds
+selectCodeEditor("hex_7seg.vhd", 547, 227); // bP
+// Elapsed time: 83 seconds
+selectCodeEditor("hex_7seg.vhd", 322, 386); // bP
+typeControlKey((HResource) null, "hex_7seg.vhd", 'v'); // bP
+selectCodeEditor("hex_7seg.vhd", 115, 269); // bP
+// Elapsed time: 12 seconds
+selectCodeEditor("hex_7seg.vhd", 87, 229); // bP
+selectCodeEditor("hex_7seg.vhd", 77, 214); // bP
+selectCodeEditor("hex_7seg.vhd", 119, 229); // bP
+selectCodeEditor("hex_7seg.vhd", 70, 247); // bP
+selectCodeEditor("hex_7seg.vhd", 63, 280); // bP
+selectCodeEditor("hex_7seg.vhd", 75, 255); // bP
+selectCodeEditor("hex_7seg.vhd", 59, 310); // bP
+selectCodeEditor("hex_7seg.vhd", 60, 296); // bP
+selectCodeEditor("hex_7seg.vhd", 63, 332); // bP
+selectCodeEditor("hex_7seg.vhd", 58, 350); // bP
+selectCodeEditor("hex_7seg.vhd", 62, 372); // bP
+selectCodeEditor("hex_7seg.vhd", 59, 382); // bP
+selectCodeEditor("hex_7seg.vhd", 65, 393); // bP
+selectCodeEditor("hex_7seg.vhd", 65, 393, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("hex_7seg.vhd", 63, 414); // bP
+selectCodeEditor("hex_7seg.vhd", 2, 399); // bP
+selectCodeEditor("hex_7seg.vhd", 82, 348); // bP
+selectCodeEditor("hex_7seg.vhd", 88, 316); // bP
+selectCodeEditor("hex_7seg.vhd", 87, 281); // bP
+selectCodeEditor("hex_7seg.vhd", 116, 231); // bP
+selectCodeEditor("hex_7seg.vhd", 76, 214); // bP
+selectCodeEditor("hex_7seg.vhd", 124, 263); // bP
+selectCodeEditor("hex_7seg.vhd", 84, 281); // bP
+selectCodeEditor("hex_7seg.vhd", 124, 297); // bP
+selectCodeEditor("hex_7seg.vhd", 121, 333); // bP
+selectCodeEditor("hex_7seg.vhd", 86, 329); // bP
+selectCodeEditor("hex_7seg.vhd", 123, 365); // bP
+selectCodeEditor("hex_7seg.vhd", 96, 385); // bP
+selectCodeEditor("hex_7seg.vhd", 48, 210); // bP
+selectCodeEditor("hex_7seg.vhd", 86, 231); // bP
+selectCodeEditor("hex_7seg.vhd", 54, 250); // bP
+selectCodeEditor("hex_7seg.vhd", 83, 248); // bP
+selectCodeEditor("hex_7seg.vhd", 61, 248); // bP
+selectCodeEditor("hex_7seg.vhd", 71, 267); // bP
+selectCodeEditor("hex_7seg.vhd", 50, 280); // bP
+selectCodeEditor("hex_7seg.vhd", 58, 301); // bP
+selectCodeEditor("hex_7seg.vhd", 49, 316); // bP
+// Elapsed time: 90 seconds
+selectCodeEditor("hex_7seg.vhd", 50, 338); // bP
+selectCodeEditor("hex_7seg.vhd", 78, 350); // bP
+selectCodeEditor("hex_7seg.vhd", 54, 364); // bP
+selectCodeEditor("hex_7seg.vhd", 47, 383); // bP
+selectCodeEditor("hex_7seg.vhd", 113, 399); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("hex_7seg.vhd", 352, 183); // bP
+selectCodeEditor("hex_7seg.vhd", 352, 183); // bP
+selectCodeEditor("hex_7seg.vhd", 363, 199); // bP
+selectCodeEditor("hex_7seg.vhd", 356, 199); // bP
+// Elapsed time: 19 seconds
+selectCodeEditor("hex_7seg.vhd", 89, 226); // bP
+selectCodeEditor("hex_7seg.vhd", 328, 435); // bP
+selectCodeEditor("hex_7seg.vhd", 87, 451); // bP
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hall_sensor(Behavioral) (hall_sensor.vhd)]", 5, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hall_sensor(Behavioral) (hall_sensor.vhd)]", 5, true, false, false, false, false, true); // D - Double Click - Node
+// Elapsed time: 11 seconds
+selectCodeEditor("hall_sensor.vhd", 73, 231); // bP
+selectCodeEditor("hall_sensor.vhd", 214, 294); // bP
+typeControlKey((HResource) null, "hall_sensor.vhd", 'c'); // bP
+typeControlKey((HResource) null, "hall_sensor.vhd", 'v'); // bP
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("hall_sensor.vhd", 300, 229); // bP
+selectCodeEditor("hall_sensor.vhd", 100, 294); // bP
+typeControlKey((HResource) null, "hall_sensor.vhd", 'c'); // bP
+typeControlKey(null, null, 'z');
+selectCodeEditor("hall_sensor.vhd", 126, 292); // bP
+typeControlKey((HResource) null, "hall_sensor.vhd", 'v'); // bP
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("hall_sensor.vhd", 297, 227); // bP
+typeControlKey((HResource) null, "hall_sensor.vhd", 'c'); // bP
+selectCodeEditor("hall_sensor.vhd", 101, 293); // bP
+typeControlKey((HResource) null, "hall_sensor.vhd", 'v'); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 1,048 MB. GUI used memory: 79 MB. Current time: 5/4/21, 3:32:50 PM CEST
+// Elapsed time: 11 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("hall_sensor.vhd", 289, 227); // bP
+selectCodeEditor("hall_sensor.vhd", 86, 293); // bP
+typeControlKey((HResource) null, "hall_sensor.vhd", 'v'); // bP
+selectCodeEditor("hall_sensor.vhd", 84, 297); // bP
+// Elapsed time: 35 seconds
+selectCodeEditor("hall_sensor.vhd", 79, 251); // bP
+selectCodeEditor("hall_sensor.vhd", 8, 233); // bP
+// Elapsed time: 55 seconds
+selectCodeEditor("hall_sensor.vhd", 486, 214); // bP
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, timer_enable(Behavioral) (controller.vhd)]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, timer_enable(Behavioral) (controller.vhd)]", 7, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, timer_enable(Behavioral) (controller.vhd)]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, timer_enable(Behavioral) (controller.vhd)]", 7, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, timer_enable(Behavioral) (controller.vhd)]", 14, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, timer_enable(Behavioral) (controller.vhd)]", 14, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 28 seconds
+selectCodeEditor("controller.vhd", 51, 316); // bP
+selectCodeEditor("controller.vhd", 24, 32); // bP
+selectCodeEditor("controller.vhd", 43, 26); // bP
+// Elapsed time: 33 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb_driver.vhd", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clock_enable.vhd", 2); // m
+// Elapsed time: 26 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hall_sensor.vhd", 4); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "controller.vhd", 5); // m
+selectCodeEditor("controller.vhd", 298, 172); // bP
+typeControlKey((HResource) null, "controller.vhd", 'v'); // bP
+selectCodeEditor("controller.vhd", 253, 196); // bP
+selectCodeEditor("controller.vhd", 253, 196); // bP
+typeControlKey((HResource) null, "controller.vhd", 'v'); // bP
+selectCodeEditor("controller.vhd", 273, 195); // bP
+selectCodeEditor("controller.vhd", 254, 174); // bP
+// Elapsed time: 19 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clock_enable.vhd", 2); // m
+selectCodeEditor("clock_enable.vhd", 221, 195); // bP
+// Elapsed time: 24 seconds
+selectCodeEditor("clock_enable.vhd", 97, 62); // bP
+selectCodeEditor("clock_enable.vhd", 97, 82); // bP
+selectCodeEditor("clock_enable.vhd", 100, 98); // bP
+// Elapsed time: 21 seconds
+selectCodeEditor("clock_enable.vhd", 43, 180); // bP
+typeControlKey((HResource) null, "clock_enable.vhd", 'v'); // bP
+selectCodeEditor("clock_enable.vhd", 6, 179); // bP
+// Elapsed time: 15 seconds
+selectCodeEditor("clock_enable.vhd", 282, 329); // bP
+selectCodeEditor("clock_enable.vhd", 281, 347); // bP
+selectCodeEditor("clock_enable.vhd", 350, 331); // bP
+selectCodeEditor("clock_enable.vhd", 367, 349); // bP
+selectCodeEditor("clock_enable.vhd", 279, 264); // bP
+selectCodeEditor("clock_enable.vhd", 272, 245); // bP
+selectCodeEditor("clock_enable.vhd", 281, 226); // bP
+selectCodeEditor("clock_enable.vhd", 272, 189); // bP
+// Elapsed time: 11 seconds
+selectCodeEditor("clock_enable.vhd", 81, 298); // bP
+// Elapsed time: 32 seconds
+selectCodeEditor("clock_enable.vhd", 58, 196); // bP
+// Elapsed time: 18 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb_driver.vhd", 1); // m
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "driver_7seg.vhd", 0); // m
+// Elapsed time: 36 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb_driver.vhd", 1); // m
+selectCodeEditor("tb_driver.vhd", 51, 302); // bP
+// Elapsed time: 12 seconds
+selectCodeEditor("tb_driver.vhd", 1, 76); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "driver_7seg.vhd", 0); // m
+selectCodeEditor("driver_7seg.vhd", 40, 306); // bP
+selectCodeEditor("driver_7seg.vhd", 45, 298); // bP
+selectCodeEditor("driver_7seg.vhd", 139, 282); // bP
+selectCodeEditor("driver_7seg.vhd", 25, 28); // bP
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("driver_7seg.vhd", 163, 284); // bP
+// Elapsed time: 24 seconds
+selectCodeEditor("driver_7seg.vhd", 64, 61); // bP
+// Elapsed time: 14 seconds
+selectCodeEditor("driver_7seg.vhd", 54, 108); // bP
+selectCodeEditor("driver_7seg.vhd", 72, 219); // bP
+selectCodeEditor("driver_7seg.vhd", 710, 217); // bP
+typeControlKey((HResource) null, "driver_7seg.vhd", 'v'); // bP
+selectCodeEditor("driver_7seg.vhd", 383, 217); // bP
+selectCodeEditor("driver_7seg.vhd", 383, 215); // bP
+selectCodeEditor("driver_7seg.vhd", 378, 214); // bP
+selectCodeEditor("driver_7seg.vhd", 385, 230); // bP
+// Elapsed time: 21 seconds
+selectCodeEditor("driver_7seg.vhd", 686, 193); // bP
+// Elapsed time: 13 seconds
+selectCodeEditor("driver_7seg.vhd", 693, 212); // bP
+selectCodeEditor("driver_7seg.vhd", 62, 197); // bP
+typeControlKey((HResource) null, "driver_7seg.vhd", 'v'); // bP
+selectCodeEditor("driver_7seg.vhd", 643, 179); // bP
+selectCodeEditor("driver_7seg.vhd", 65, 160); // bP
+typeControlKey((HResource) null, "driver_7seg.vhd", 'v'); // bP
+selectCodeEditor("driver_7seg.vhd", 61, 160); // bP
+selectCodeEditor("driver_7seg.vhd", 390, 212); // bP
+// Elapsed time: 21 seconds
+selectCodeEditor("driver_7seg.vhd", 50, 243); // bP
+selectCodeEditor("driver_7seg.vhd", 640, 266); // bP
+typeControlKey((HResource) null, "driver_7seg.vhd", 'v'); // bP
+selectCodeEditor("driver_7seg.vhd", 338, 265); // bP
+selectCodeEditor("driver_7seg.vhd", 347, 287); // bP
+selectCodeEditor("driver_7seg.vhd", 623, 265); // bP
+selectCodeEditor("driver_7seg.vhd", 25, 228); // bP
+typeControlKey((HResource) null, "driver_7seg.vhd", 'v'); // bP
+selectCodeEditor("driver_7seg.vhd", 5, 252); // bP
+selectCodeEditor("driver_7seg.vhd", 403, 249); // bP
+selectCodeEditor("driver_7seg.vhd", 399, 279); // bP
+selectCodeEditor("driver_7seg.vhd", 24, 263); // bP
+typeControlKey((HResource) null, "driver_7seg.vhd", 'v'); // bP
+selectCodeEditor("driver_7seg.vhd", 24, 281); // bP
+// Elapsed time: 105 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hall_sensor.vhd", 4); // m
+// Elapsed time: 10 seconds
+selectCodeEditor("hall_sensor.vhd", 165, 289); // bP
+selectCodeEditor("hall_sensor.vhd", 143, 297); // bP
+selectCodeEditor("hall_sensor.vhd", 159, 283); // bP
+selectCodeEditor("hall_sensor.vhd", 27, 32); // bP
+// Elapsed time: 12 seconds
+selectCodeEditor("hall_sensor.vhd", 394, 112); // bP
+selectCodeEditor("hall_sensor.vhd", 201, 162); // bP
+selectCodeEditor("hall_sensor.vhd", 3, 104); // bP
+// Elapsed time: 23 seconds
+selectCodeEditor("hall_sensor.vhd", 311, 165); // bP
+selectCodeEditor("hall_sensor.vhd", 311, 163, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("hall_sensor.vhd", 311, 163); // bP
+typeControlKey((HResource) null, "hall_sensor.vhd", 'v'); // bP
+// Elapsed time: 15 seconds
+selectCodeEditor("hall_sensor.vhd", 319, 180); // bP
+typeControlKey((HResource) null, "hall_sensor.vhd", 'v'); // bP
+selectCodeEditor("hall_sensor.vhd", 407, 181); // bP
+// Elapsed time: 129 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, timer_enable(Behavioral) (controller.vhd)]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, timer_enable(Behavioral) (controller.vhd)]", 7, false, false, false, false, false, true); // D - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hall_sensor.vhd", 4); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "controller.vhd", 5); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hall_sensor.vhd", 4); // m
+// Elapsed time: 125 seconds
+selectCodeEditor("hall_sensor.vhd", 24, 315); // bP
+selectCodeEditor("hall_sensor.vhd", 37, 219); // bP
+typeControlKey((HResource) null, "hall_sensor.vhd", 'v'); // bP
+selectCodeEditor("hall_sensor.vhd", 6, 215); // bP
+selectCodeEditor("hall_sensor.vhd", 264, 232); // bP
+selectCodeEditor("hall_sensor.vhd", 17, 332); // bP
+selectCodeEditor("hall_sensor.vhd", 38, 246); // bP
+typeControlKey((HResource) null, "hall_sensor.vhd", 'v'); // bP
+selectCodeEditor("hall_sensor.vhd", 39, 246); // bP
+selectCodeEditor("hall_sensor.vhd", 111, 198); // bP
+selectCodeEditor("hall_sensor.vhd", 111, 198, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("hall_sensor.vhd", 115, 215); // bP
+selectCodeEditor("hall_sensor.vhd", 111, 195); // bP
+selectCodeEditor("hall_sensor.vhd", 100, 195); // bP
+selectCodeEditor("hall_sensor.vhd", 100, 195, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "hall_sensor.vhd", 'c'); // bP
+selectCodeEditor("hall_sensor.vhd", 112, 398); // bP
+selectCodeEditor("hall_sensor.vhd", 111, 398, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "hall_sensor.vhd", 'v'); // bP
+typeControlKey(null, null, 'z');
+selectCodeEditor("hall_sensor.vhd", 183, 403); // bP
+selectCodeEditor("hall_sensor.vhd", 183, 403, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "hall_sensor.vhd", 'v'); // bP
+selectCodeEditor("hall_sensor.vhd", 332, 380); // bP
+selectCodeEditor("hall_sensor.vhd", 332, 380, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "hall_sensor.vhd", 'v'); // bP
+selectCodeEditor("hall_sensor.vhd", 138, 115); // bP
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// am (cr): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a
+// bz (cr):  Save Constraints : addNotify
+// TclEventType: DG_GRAPH_STALE
+// e (cr):  Run Simulation : addNotify
+dismissDialog("Save Project"); // am
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'tb_driver' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab -wto 6e9821bcef2a4b76bbb657edf77520af --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_driver_behav xil_defaultlib.tb_driver -log elaborate.log" 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "tb_driver_behav -key {Behavioral:sim_1:Functional:tb_driver} -tclbatch {tb_driver.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2020.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// Waveform: addNotify
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,048 MB. GUI used memory: 85 MB. Current time: 5/4/21, 3:52:50 PM CEST
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: source tb_driver.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 1000ns 
+// Tcl Message: Note: Stimulus process started Time: 0 ps  Iteration: 0  Process: /tb_driver/p_stimulus  File: E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sim_1/new/tb_driver.vhd Note: Stimulus process finished Time: 0 ps  Iteration: 0  Process: /tb_driver/p_stimulus  File: E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sim_1/new/tb_driver.vhd 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_driver_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1104.871 ; gain = 0.000 
+// 'd' command handler elapsed time: 9 seconds
+dismissDialog("Run Simulation"); // e
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+selectButton(RDIResource.GraphicalView_ZOOM_FIT, "Waveform Viewer_zoom_fit"); // E
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_CLOSE_WCFG
+closeView(RDIResource.RDIViews_WAVEFORM_VIEWER, "Untitled 4"); // w
+// Elapsed time: 162 seconds
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k
+closeTask("Simulation", "Behavioral Simulation - Functional - sim_1 - tb_driver", "DesignTask.SIMULATION");
+// A (cr): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// bz (cr):  Close : addNotify
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+dismissDialog("Confirm Close"); // A
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+dismissDialog("Close"); // bz
+// Elapsed time: 159 seconds
+selectCodeEditor("hall_sensor.vhd", 275, 336); // bP
+selectCodeEditor("hall_sensor.vhd", 275, 336); // bP
+// Elapsed time: 34 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clock_enable.vhd", 2); // m
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "controller.vhd", 5); // m
+// Elapsed time: 125 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hex_7seg.vhd", 3); // m
+// Elapsed time: 38 seconds
+selectCodeEditor("hex_7seg.vhd", 391, 76); // bP
+// Elapsed time: 23 seconds
+selectCodeEditor("hex_7seg.vhd", 478, 94); // bP
+// Elapsed time: 53 seconds
+selectCodeEditor("hex_7seg.vhd", 75, 232); // bP
+// Elapsed time: 18 seconds
+selectCodeEditor("hex_7seg.vhd", 72, 128); // bP
+selectCodeEditor("hex_7seg.vhd", 72, 128, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "hex_7seg.vhd", 'c'); // bP
+selectCodeEditor("hex_7seg.vhd", 212, 337); // bP
+selectCodeEditor("hex_7seg.vhd", 212, 337, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "hex_7seg.vhd", 'v'); // bP
+selectCodeEditor("hex_7seg.vhd", 106, 332); // bP
+selectCodeEditor("hex_7seg.vhd", 106, 332, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "hex_7seg.vhd", 'v'); // bP
+selectCodeEditor("hex_7seg.vhd", 528, 232); // bP
+// Elapsed time: 13 seconds
+selectCodeEditor("hex_7seg.vhd", 299, 321); // bP
+selectCodeEditor("hex_7seg.vhd", 301, 351); // bP
+selectCodeEditor("hex_7seg.vhd", 302, 383); // bP
+selectCodeEditor("hex_7seg.vhd", 313, 174); // bP
+selectCodeEditor("hex_7seg.vhd", 313, 174, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("hex_7seg.vhd", 326, 181); // bP
+typeControlKey((HResource) null, "hex_7seg.vhd", 'c'); // bP
+selectCodeEditor("hex_7seg.vhd", 297, 215); // bP
+typeControlKey((HResource) null, "hex_7seg.vhd", 'v'); // bP
+typeControlKey(null, null, 'z');
+selectCodeEditor("hex_7seg.vhd", 301, 212); // bP
+typeControlKey((HResource) null, "hex_7seg.vhd", 'v'); // bP
+selectCodeEditor("hex_7seg.vhd", 302, 249); // bP
+typeControlKey((HResource) null, "hex_7seg.vhd", 'v'); // bP
+selectCodeEditor("hex_7seg.vhd", 301, 281); // bP
+typeControlKey((HResource) null, "hex_7seg.vhd", 'v'); // bP
+selectCodeEditor("hex_7seg.vhd", 302, 317); // bP
+typeControlKey((HResource) null, "hex_7seg.vhd", 'v'); // bP
+selectCodeEditor("hex_7seg.vhd", 300, 349); // bP
+typeControlKey((HResource) null, "hex_7seg.vhd", 'v'); // bP
+selectCodeEditor("hex_7seg.vhd", 301, 382); // bP
+typeControlKey((HResource) null, "hex_7seg.vhd", 'v'); // bP
+selectCodeEditor("hex_7seg.vhd", 302, 415); // bP
+typeControlKey((HResource) null, "hex_7seg.vhd", 'v'); // bP
+// Elapsed time: 23 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hall_sensor.vhd", 4); // m
+// Elapsed time: 46 seconds
+selectCodeEditor("hall_sensor.vhd", 304, 180); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("hall_sensor.vhd", 129, 349); // bP
+selectCodeEditor("hall_sensor.vhd", 134, 367); // bP
+selectCodeEditor("hall_sensor.vhd", 134, 383); // bP
+selectCodeEditor("hall_sensor.vhd", 135, 402); // bP
+selectCodeEditor("hall_sensor.vhd", 238, 351); // bP
+// Elapsed time: 101 seconds
+selectCodeEditor("hall_sensor.vhd", 280, 334); // bP
+// Elapsed time: 12 seconds
+selectCodeEditor("hall_sensor.vhd", 85, 289); // bP
+selectCodeEditor("hall_sensor.vhd", 75, 281); // bP
+selectCodeEditor("hall_sensor.vhd", 193, 316); // bP
+// Elapsed time: 52 seconds
+selectCodeEditor("hall_sensor.vhd", 58, 432); // bP
+// Elapsed time: 33 seconds
+selectCodeEditor("hall_sensor.vhd", 300, 233); // bP
+selectCodeEditor("hall_sensor.vhd", 321, 221); // bP
+selectCodeEditor("hall_sensor.vhd", 326, 217); // bP
+// Elapsed time: 14 seconds
+selectCodeEditor("hall_sensor.vhd", 306, 214); // bP
+// Elapsed time: 54 seconds
+selectCodeEditor("hall_sensor.vhd", 325, 216); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("hall_sensor.vhd", 141, 214); // bP
+// Elapsed time: 55 seconds
+selectCodeEditor("hall_sensor.vhd", 136, 214); // bP
+selectCodeEditor("hall_sensor.vhd", 136, 214, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("hall_sensor.vhd", 138, 215); // bP
+selectCodeEditor("hall_sensor.vhd", 138, 215); // bP
+typeControlKey((HResource) null, "hall_sensor.vhd", 'v'); // bP
+// Elapsed time: 14 seconds
+selectCodeEditor("hall_sensor.vhd", 100, 211); // bP
+selectCodeEditor("hall_sensor.vhd", 100, 211, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "hall_sensor.vhd", 'c'); // bP
+selectCodeEditor("hall_sensor.vhd", 190, 310); // bP
+selectCodeEditor("hall_sensor.vhd", 188, 310, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "hall_sensor.vhd", 'v'); // bP
+selectCodeEditor("hall_sensor.vhd", 188, 182); // bP
+selectCodeEditor("hall_sensor.vhd", 185, 166); // bP
+selectCodeEditor("hall_sensor.vhd", 187, 227); // bP
+selectCodeEditor("hall_sensor.vhd", 185, 265); // bP
+selectCodeEditor("hall_sensor.vhd", 184, 278); // bP
+// Elapsed time: 81 seconds
+selectCodeEditor("hall_sensor.vhd", 353, 214); // bP
+selectCodeEditor("hall_sensor.vhd", 353, 213); // bP
+// Elapsed time: 56 seconds
+selectCodeEditor("hall_sensor.vhd", 147, 233); // bP
+// Elapsed time: 13 seconds
+selectCodeEditor("hall_sensor.vhd", 120, 234); // bP
+selectCodeEditor("hall_sensor.vhd", 120, 234, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "hall_sensor.vhd", 'c'); // bP
+selectCodeEditor("hall_sensor.vhd", 187, 366); // bP
+selectCodeEditor("hall_sensor.vhd", 187, 366, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "hall_sensor.vhd", 'v'); // bP
+selectCodeEditor("hall_sensor.vhd", 328, 230); // bP
+// Elapsed time: 45 seconds
+selectCodeEditor("hall_sensor.vhd", 18, 216); // bP
+selectCodeEditor("hall_sensor.vhd", 263, 129); // bP
+typeControlKey((HResource) null, "hall_sensor.vhd", 'v'); // bP
+selectCodeEditor("hall_sensor.vhd", 33, 142); // bP
+selectCodeEditor("hall_sensor.vhd", 264, 113); // bP
+// Elapsed time: 406 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_hall(Behavioral) (tb_hall_sensor.vhd)]", 13, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_hall(Behavioral) (tb_hall_sensor.vhd)]", 13, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("tb_hall_sensor.vhd", 170, 280); // bP
+selectCodeEditor("tb_hall_sensor.vhd", 26, 30); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 1,048 MB. GUI used memory: 84 MB. Current time: 5/4/21, 4:22:50 PM CEST
+// Elapsed time: 13 seconds
+selectCodeEditor("tb_hall_sensor.vhd", 214, 264); // bP
+selectCodeEditor("tb_hall_sensor.vhd", 2, 139); // bP
+// Elapsed time: 12 seconds
+selectCodeEditor("tb_hall_sensor.vhd", 97, 145); // bP
+selectCodeEditor("tb_hall_sensor.vhd", 108, 143); // bP
+selectCodeEditor("tb_hall_sensor.vhd", 108, 143, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "tb_hall_sensor.vhd", 'c'); // bP
+selectCodeEditor("tb_hall_sensor.vhd", 66, 182); // bP
+selectCodeEditor("tb_hall_sensor.vhd", 66, 182, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "tb_hall_sensor.vhd", 'v'); // bP
+selectCodeEditor("tb_hall_sensor.vhd", 227, 214); // bP
+selectCodeEditor("tb_hall_sensor.vhd", 227, 214, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "tb_hall_sensor.vhd", 'v'); // bP
+// Elapsed time: 19 seconds
+selectCodeEditor("tb_hall_sensor.vhd", 12, 287); // bP
+selectCodeEditor("tb_hall_sensor.vhd", 217, 317); // bP
+// Elapsed time: 11 seconds
+selectCodeEditor("tb_hall_sensor.vhd", 27, 320); // bP
+// Elapsed time: 117 seconds
+selectCodeEditor("tb_hall_sensor.vhd", 147, 213); // bP
+selectCodeEditor("tb_hall_sensor.vhd", 26, 197); // bP
+// Elapsed time: 125 seconds
+selectCodeEditor("tb_hall_sensor.vhd", 154, 297); // bP
+selectCodeEditor("tb_hall_sensor.vhd", 36, 174); // bP
+selectCodeEditor("tb_hall_sensor.vhd", 36, 165); // bP
+selectCodeEditor("tb_hall_sensor.vhd", 37, 193); // bP
+selectCodeEditor("tb_hall_sensor.vhd", 36, 216); // bP
+selectCodeEditor("tb_hall_sensor.vhd", 36, 235); // bP
+selectCodeEditor("tb_hall_sensor.vhd", 35, 248); // bP
+selectCodeEditor("tb_hall_sensor.vhd", 26, 287); // bP
+selectCodeEditor("tb_hall_sensor.vhd", 20, 211); // bP
+selectCodeEditor("tb_hall_sensor.vhd", 30, 244); // bP
+selectCodeEditor("tb_hall_sensor.vhd", 30, 269); // bP
+selectCodeEditor("tb_hall_sensor.vhd", 30, 283); // bP
+selectCodeEditor("tb_hall_sensor.vhd", 28, 294); // bP
+selectCodeEditor("tb_hall_sensor.vhd", 29, 339); // bP
+selectCodeEditor("tb_hall_sensor.vhd", 43, 372); // bP
+selectCodeEditor("tb_hall_sensor.vhd", 43, 381); // bP
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, hall_sensor(Behavioral) (hall_sensor.vhd)]", 12, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ah
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ah
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ah
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top hall_sensor [get_filesets sim_1] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top_lib xil_defaultlib [get_filesets sim_1] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sim_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_hall(Behavioral) (tb_hall_sensor.vhd)]", 13, false, false, false, false, true, false); // D - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ah
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ah
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top tb_hall [get_filesets sim_1] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top_lib xil_defaultlib [get_filesets sim_1] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sim_1 
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// am (cr): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a
+// bz (cr):  Save Constraints : addNotify
+// TclEventType: DG_GRAPH_STALE
+// e (cr):  Run Simulation : addNotify
+dismissDialog("Save Project"); // am
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'tb_hall' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... 
+// Tcl Message: INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim' 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-99] Step results log file:'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim/xvhdl.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim/xvhdl.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1104.871 ; gain = 0.000 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// HOptionPane Error: 'ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  (Run Simulation)'
+// 'd' command handler elapsed time: 11 seconds
+selectButton("OptionPane.button", "OK"); // JButton
+// a (cr): Critical Messages: addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sim_1 
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // a
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "controller.vhd", 5); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hall_sensor.vhd", 4); // m
+// G (cr): Invalid Top Module: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Invalid Top Module"); // G
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hex_7seg.vhd", 3); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clock_enable.vhd", 2); // m
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sim_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, driver_7seg(Behavioral) (driver_7seg.vhd)]", 1, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ah
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ah
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ah
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ah
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_hall_sensor(Behavioral) (tb_hall_sensor.vhd)]", 13, false, false, false, false, true, false); // D - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ah
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ah
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top tb_hall_sensor [get_filesets sim_1] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top_lib xil_defaultlib [get_filesets sim_1] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sim_1 
+// Elapsed time: 63 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cr):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'tb_hall_sensor' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: "xvhdl --incr --relax -prj tb_hall_sensor_vhdl.prj" INFO: [VRFC 10-163] Analyzing VHDL file "E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sim_1/new/tb_hall_sensor.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'tb_hall_sensor' 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab -wto 6e9821bcef2a4b76bbb657edf77520af --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_hall_sensor_behav xil_defaultlib.tb_hall_sensor -log elaborate.log" 
+// Elapsed time: 38 seconds
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a
+// 'd' command handler elapsed time: 38 seconds
+// Elapsed time: 12 seconds
+selectButton("HStatusBar_ProgressStatusItem_Cancel", "Cancel"); // NullButton
+// Tcl Message: INFO: [Common 17-41] Interrupt caught. Command should exit soon. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed:  
+// Tcl Message: run_program: Time (s): cpu = 00:00:02 ; elapsed = 00:00:52 . Memory (MB): peak = 1104.871 ; gain = 0.000 
+// Tcl Message: INFO: [Common 17-344] 'run_program' was cancelled INFO: [Vivado 12-5357] 'elaborate' step aborted 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:53 . Memory (MB): peak = 1104.871 ; gain = 0.000 
+// Tcl Message: INFO: [Common 17-344] 'launch_simulation' was cancelled 
+dismissDialog("Run Simulation"); // e
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hall_sensor(Behavioral) (hall_sensor.vhd)]", 5, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ah
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ah
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top hall_sensor [current_fileset] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ak
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cr):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'tb_hall_sensor' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: "xvhdl --incr --relax -prj tb_hall_sensor_vhdl.prj" 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab -wto 6e9821bcef2a4b76bbb657edf77520af --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_hall_sensor_behav xil_defaultlib.tb_hall_sensor -log elaborate.log" 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: Vivado Simulator 2020.2 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved. Running: E:/VUT/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6e9821bcef2a4b76bbb657edf77520af --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_hall_sensor_behav xil_defaultlib.tb_hall_sensor -log elaborate.log  Using 2 slave threads. Starting static elaboration Completed static elaboration INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "tb_hall_sensor_behav -key {Behavioral:sim_1:Functional:tb_hall_sensor} -tclbatch {tb_hall_sensor.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2020.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// Waveform: addNotify
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,048 MB. GUI used memory: 90 MB. Current time: 5/4/21, 4:32:09 PM CEST
+// Tcl Message: source tb_hall_sensor.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: # run 1000ns 
+// Tcl Message: Note: Stimulus process started Time: 0 ps  Iteration: 0  Process: /tb_hall_sensor/p_stimulus  File: E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sim_1/new/tb_hall_sensor.vhd 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_hall_sensor_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1104.871 ; gain = 0.000 
+// 'd' command handler elapsed time: 5 seconds
+dismissDialog("Run Simulation"); // e
+selectButton(RDIResource.GraphicalView_ZOOM_FIT, "Waveform Viewer_zoom_fit"); // E
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,048 MB. GUI used memory: 91 MB. Current time: 5/4/21, 4:32:14 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectButton(RDIResource.GraphicalView_ZOOM_FIT, "Waveform Viewer_zoom_fit"); // E
+selectButton(RDIResource.GraphicalView_ZOOM_IN, "Waveform Viewer_zoom_in"); // E
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,048 MB. GUI used memory: 92 MB. Current time: 5/4/21, 4:32:22 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,048 MB. GUI used memory: 92 MB. Current time: 5/4/21, 4:32:25 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,048 MB. GUI used memory: 92 MB. Current time: 5/4/21, 4:32:25 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,048 MB. GUI used memory: 92 MB. Current time: 5/4/21, 4:32:25 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,048 MB. GUI used memory: 92 MB. Current time: 5/4/21, 4:32:25 PM CEST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,048 MB. GUI used memory: 92 MB. Current time: 5/4/21, 4:32:25 PM CEST
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb_driver.vhd", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hex_7seg.vhd", 3); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hall_sensor.vhd", 4); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb_hall_sensor.vhd", 6); // m
+// TclEventType: WAVEFORM_CLOSE_WCFG
+closeView(RDIResource.RDIViews_WAVEFORM_VIEWER, "Untitled 5"); // w
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k
+closeTask("Simulation", "Behavioral Simulation - Functional - sim_1 - tb_hall_sensor", "DesignTask.SIMULATION");
+// A (cr): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// bz (cr):  Close : addNotify
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+dismissDialog("Confirm Close"); // A
+// [GUI Memory]: 149 MB (+111kb) [02:15:14]
+// WARNING: HEventQueue.dispatchEvent() is taking  1123 ms.
+// Tcl Message: close_sim 
+// Elapsed time: 12 seconds
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a
+// Tcl Message: INFO: [Common 17-41] Interrupt caught. Command should exit soon. 

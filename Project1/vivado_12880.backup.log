@@ -1,0 +1,427 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue May  4 14:17:30 2021
+# Process ID: 12880
+# Current directory: E:/VUT/4 Semester/DE1/Project1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4028 E:\VUT\4 Semester\DE1\Project1\Project1.xpr
+# Log file: E:/VUT/4 Semester/DE1/Project1/vivado.log
+# Journal file: E:/VUT/4 Semester/DE1/Project1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {E:/VUT/4 Semester/DE1/Project1/Project1.xpr}
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'E:/VUT/4 Semester/DE1/Project1/Project1.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/VUT/Vivado/2020.2/data/ip'.
+update_compile_order -fileset sources_1
+set_property top tb_driver [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_driver' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_driver_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sources_1/new/driver_7seg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'driver_7seg'
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sim_1/new/tb_driver.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_driver'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim'
+"xelab -wto 6e9821bcef2a4b76bbb657edf77520af --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_driver_behav xil_defaultlib.tb_driver -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/VUT/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6e9821bcef2a4b76bbb657edf77520af --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_driver_behav xil_defaultlib.tb_driver -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=4)\]
+Compiling architecture behavioral of entity xil_defaultlib.hex_7seg [hex_7seg_default]
+Compiling architecture behavioral of entity xil_defaultlib.cnt_up_down [\cnt_up_down(g_cnt_width=2)\]
+Compiling architecture behavioral of entity xil_defaultlib.driver_7seg [driver_7seg_default]
+Compiling architecture testbench of entity xil_defaultlib.tb_driver
+Built simulation snapshot tb_driver_behav
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source E:/VUT/4 -notrace
+couldn't read file "E:/VUT/4": permission denied
+INFO: [Common 17-206] Exiting Webtalk at Tue May  4 14:18:25 2021...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_driver_behav -key {Behavioral:sim_1:Functional:tb_driver} -tclbatch {tb_driver.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_driver.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_driver/p_stimulus  File: E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sim_1/new/tb_driver.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_driver/p_stimulus  File: E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sim_1/new/tb_driver.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_driver_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1017.008 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_driver' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_driver_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sim_1/new/tb_driver.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_driver'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim'
+"xelab -wto 6e9821bcef2a4b76bbb657edf77520af --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_driver_behav xil_defaultlib.tb_driver -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/VUT/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6e9821bcef2a4b76bbb657edf77520af --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_driver_behav xil_defaultlib.tb_driver -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=4)\]
+Compiling architecture behavioral of entity xil_defaultlib.hex_7seg [hex_7seg_default]
+Compiling architecture behavioral of entity xil_defaultlib.cnt_up_down [\cnt_up_down(g_cnt_width=2)\]
+Compiling architecture behavioral of entity xil_defaultlib.driver_7seg [driver_7seg_default]
+Compiling architecture testbench of entity xil_defaultlib.tb_driver
+Built simulation snapshot tb_driver_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_driver_behav -key {Behavioral:sim_1:Functional:tb_driver} -tclbatch {tb_driver.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_driver.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_driver/p_stimulus  File: E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sim_1/new/tb_driver.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_driver/p_stimulus  File: E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sim_1/new/tb_driver.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_driver_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1104.871 ; gain = 15.969
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_driver' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_driver_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sim_1/new/tb_driver.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_driver'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim'
+"xelab -wto 6e9821bcef2a4b76bbb657edf77520af --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_driver_behav xil_defaultlib.tb_driver -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/VUT/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6e9821bcef2a4b76bbb657edf77520af --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_driver_behav xil_defaultlib.tb_driver -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=4)\]
+Compiling architecture behavioral of entity xil_defaultlib.hex_7seg [hex_7seg_default]
+Compiling architecture behavioral of entity xil_defaultlib.cnt_up_down [\cnt_up_down(g_cnt_width=2)\]
+Compiling architecture behavioral of entity xil_defaultlib.driver_7seg [driver_7seg_default]
+Compiling architecture testbench of entity xil_defaultlib.tb_driver
+Built simulation snapshot tb_driver_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_driver_behav -key {Behavioral:sim_1:Functional:tb_driver} -tclbatch {tb_driver.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_driver.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_driver/p_stimulus  File: E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sim_1/new/tb_driver.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_driver/p_stimulus  File: E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sim_1/new/tb_driver.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_driver_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1104.871 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_driver' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_driver_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sources_1/new/clock_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'clock_enable'
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sources_1/new/hex_7seg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'hex_7seg'
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sources_1/new/driver_7seg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'driver_7seg'
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sim_1/new/tb_driver.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_driver'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim'
+"xelab -wto 6e9821bcef2a4b76bbb657edf77520af --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_driver_behav xil_defaultlib.tb_driver -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/VUT/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6e9821bcef2a4b76bbb657edf77520af --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_driver_behav xil_defaultlib.tb_driver -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=4)\]
+Compiling architecture behavioral of entity xil_defaultlib.hex_7seg [hex_7seg_default]
+Compiling architecture behavioral of entity xil_defaultlib.cnt_up_down [\cnt_up_down(g_cnt_width=2)\]
+Compiling architecture behavioral of entity xil_defaultlib.driver_7seg [driver_7seg_default]
+Compiling architecture testbench of entity xil_defaultlib.tb_driver
+Built simulation snapshot tb_driver_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_driver_behav -key {Behavioral:sim_1:Functional:tb_driver} -tclbatch {tb_driver.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_driver.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_driver/p_stimulus  File: E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sim_1/new/tb_driver.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_driver/p_stimulus  File: E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sim_1/new/tb_driver.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_driver_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1104.871 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top hall_sensor [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+set_property top tb_hall [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_hall' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_hall_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sources_1/new/controller.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'timer_enable'
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sources_1/new/clock_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'clock_enable'
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sources_1/new/cnt_up_down.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'cnt_up_down'
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sources_1/new/hex_7seg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'hex_7seg'
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sources_1/new/driver_7seg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'driver_7seg'
+ERROR: [VRFC 10-719] formal port/generic <hex_i> is not declared in <hex_7seg> [E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sources_1/new/driver_7seg.vhd:71]
+ERROR: [VRFC 10-3353] formal port 'num_i' has no actual or default value [E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sources_1/new/driver_7seg.vhd:69]
+ERROR: [VRFC 10-3782] unit 'behavioral' ignored due to previous errors [E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sources_1/new/driver_7seg.vhd:33]
+INFO: [VRFC 10-3070] VHDL file 'E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sources_1/new/driver_7seg.vhd' ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1104.871 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+set_property top tb_hall_sensor [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_hall_sensor' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_hall_sensor_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sim_1/new/tb_hall_sensor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_hall_sensor'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim'
+"xelab -wto 6e9821bcef2a4b76bbb657edf77520af --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_hall_sensor_behav xil_defaultlib.tb_hall_sensor -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/VUT/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6e9821bcef2a4b76bbb657edf77520af --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_hall_sensor_behav xil_defaultlib.tb_hall_sensor -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.tb_hall_sensor
+Built simulation snapshot tb_hall_sensor_behav
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source E:/VUT/4 -notrace
+couldn't read file "E:/VUT/4": permission denied
+INFO: [Common 17-206] Exiting Webtalk at Tue May  4 16:30:57 2021...
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run_program: Time (s): cpu = 00:00:02 ; elapsed = 00:00:52 . Memory (MB): peak = 1104.871 ; gain = 0.000
+INFO: [Common 17-344] 'run_program' was cancelled
+INFO: [Vivado 12-5357] 'elaborate' step aborted
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:53 . Memory (MB): peak = 1104.871 ; gain = 0.000
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+set_property top hall_sensor [current_fileset]
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_hall_sensor' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_hall_sensor_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim'
+"xelab -wto 6e9821bcef2a4b76bbb657edf77520af --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_hall_sensor_behav xil_defaultlib.tb_hall_sensor -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/VUT/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6e9821bcef2a4b76bbb657edf77520af --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_hall_sensor_behav xil_defaultlib.tb_hall_sensor -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/VUT/4 Semester/DE1/Project1/Project1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_hall_sensor_behav -key {Behavioral:sim_1:Functional:tb_hall_sensor} -tclbatch {tb_hall_sensor.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_hall_sensor.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_hall_sensor/p_stimulus  File: E:/VUT/4 Semester/DE1/Project1/Project1.srcs/sim_1/new/tb_hall_sensor.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_hall_sensor_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1104.871 ; gain = 0.000
+close_sim
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
