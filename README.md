@@ -11,7 +11,7 @@
 
 ### Project objectives
 
-Console for exercise bike/bike, hall sensor, measuring and displaying speed, distance traveled, etc.
+Project goal is to implement console for exercise bike or bike onto board Arty A7-35T. It should be using hall sensor to messure rotations of bike wheel. From rotation we should count and display  speed, distance traveled. The information of the speed and distance should shown on connect 7 segment displays.
 
 
 ## Hardware description
