@@ -1078,7 +1078,6 @@ And we can add function that will display burned calories. It would be counted f
 ## Video
 
 ## References
----------------------------------------------------------------------------------
 Most of the things we learned from the exercises from Digital Electronics 1.
 ---------------------------------------------------------------------------------
 https://reference.digilentinc.com/reference/programmable-logic/arty-a7/reference-manual
