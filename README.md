@@ -1078,9 +1078,16 @@ And we can add function that will display burned calories. It would be counted f
 ## Video
 
 ## References
+---------------------------------------------------------------------------------
 https://reference.digilentinc.com/reference/programmable-logic/arty-a7/reference-manual
+---------------------------------------------------------------------------------
 https://store.digilentinc.com/pmod-ssd-seven-segment-display/
+---------------------------------------------------------------------------------
 https://www.reichelt.com/de/en/developer-boards-magnetic-hall-sensor-a3141-debo-sens-hall-p239090.html
+---------------------------------------------------------------------------------
 https://www.aristutorf.com/index.php?main_page=product_info&products_id=338449
+---------------------------------------------------------------------------------
 https://www.rohm.com/electronics-basics/sensor/pulse-sensor
+---------------------------------------------------------------------------------
 https://community.createlabz.com/knowledgebase/heart-beat-counter-on-raspberry-pi-zero-using-pulse-sensor-and-lcd-display/
+---------------------------------------------------------------------------------
