@@ -7,7 +7,7 @@
 * Dominik Baláž
 * Samuel Bartko
 
-[Link to your GitHub project folder]( http://github.com/xxx)
+[Link to your GitHub project folder](https://github.com/SamuelBartko/DE1-Project/blob/main/README.md)
 
 ### Project objectives
 
