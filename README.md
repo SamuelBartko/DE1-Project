@@ -1095,13 +1095,3 @@ https://www.rohm.com/electronics-basics/sensor/pulse-sensor
 ---------------------------------------------------------------------------------
 https://community.createlabz.com/knowledgebase/heart-beat-counter-on-raspberry-pi-zero-using-pulse-sensor-and-lcd-display/
 ---------------------------------------------------------------------------------
-
-Skuska
-<div class="plyr__video-embed" id="player">
-  <iframe
-    src="https:https://www.youtube.com/watch?v=-a7UKXwctU4origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
-    allowfullscreen
-    allowtransparency
-    allow="autoplay"
-  ></iframe>
-</div>
