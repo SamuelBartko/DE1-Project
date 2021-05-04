@@ -11,7 +11,7 @@
 
 ### Project objectives
 
-Project goal is to implement console for exercise bike or bike onto board Arty A7-35T. It should be using hall sensor to messure rotations of bike wheel. From rotation we should count and display  speed, distance traveled. The information of the speed and distance should shown on connect 7 segment displays.
+Console for exercise bike/bike, hall sensor, measuring and displaying speed, distance traveled, etc.
 
 
 ## Hardware description
@@ -544,19 +544,6 @@ end Behavioral;
 
 
 ```
-### (7).Modul `top`
-```vhdl
-
-```
-## TOP module description and simulations
-
-The top module implements all modules onto Arty A7-35T board. 
-
-### Schematic of the Top module
-
-![TOP](Images/top.png)
-
-
 ### Code of the `top.vhdl` 
 ```vhdl
 ----------------------------------------------------------------------------------
@@ -642,6 +629,432 @@ end architecture Behavioral;
 
 
 ```
+
+## Tests
+### (1).test `tb_hall_sensor `
+
+
+```vhdl
+---------------------------------------------------------------------------------
+-- tb_hall_sensor
+----------------------------------------------------------------------------------
+
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity tb_hall_sensor is
+--  Port ( );
+end tb_hall_sensor;
+
+architecture Behavioral of tb_hall_sensor is
+
+    -- Local constants
+    constant c_CLK_100MHZ_PERIOD : time    := 10 ns;
+    --Local signals
+    signal s_clk_100MHz        : std_logic;            
+    signal s_hall_sensor       : std_logic;
+    signal s_mode              : std_logic;
+    signal s_reset             : std_logic;
+begin
+
+    uut_hall_sensor : entity work.hall_sensor
+        port map(
+             clk            =>  s_clk_100MHz, 
+             hall_sensor    =>  s_hall_sensor,
+             wheel          =>  250,
+             button_mod     =>  s_mode,
+             button_reset   =>  s_reset
+       );
+        
+
+    p_clk_gen : process
+    begin
+        while now < 2000 ms loop         -- 75 periods of 100MHz clock
+            s_clk_100MHz <= '0';
+            wait for c_CLK_100MHZ_PERIOD / 2;
+            s_clk_100MHz <= '1';
+            wait for c_CLK_100MHZ_PERIOD / 2;
+        end loop;
+        wait;
+    end process p_clk_gen;
+
+
+        
+    
+    p_stimulus : process
+    begin
+        report "Stimulus process started" severity note;
+        s_mode <='0';
+        s_reset <='0';
+        s_hall_sensor <= '0'; wait for 10 ms; 
+        s_hall_sensor <= '1'; wait for 30 ns;
+        s_hall_sensor <= '0'; wait for 10 ms; 
+        s_hall_sensor <= '1'; wait for 30 ns;
+        s_hall_sensor <= '0'; wait for 10 ms; 
+        s_hall_sensor <= '1'; wait for 30 ns;
+        s_hall_sensor <= '0'; wait for 10 ms; 
+        s_hall_sensor <= '1'; wait for 30 ns;
+        s_hall_sensor <= '0'; wait for 10 ms; 
+        s_hall_sensor <= '1'; wait for 30 ns;
+        s_hall_sensor <= '0'; wait for 10 ms; 
+        s_hall_sensor <= '1'; wait for 30 ns;
+        s_hall_sensor <= '0'; 
+         
+         wait for 8 ms; 
+        s_hall_sensor <= '1'; wait for 25 ns;
+        s_hall_sensor <= '0'; wait for 8 ms; 
+        s_hall_sensor <= '1'; wait for 25 ns;
+        s_hall_sensor <= '0'; wait for 8 ms; 
+        s_hall_sensor <= '1'; wait for 25 ns;
+        s_hall_sensor <= '0'; wait for 8 ms; 
+        s_hall_sensor <= '1'; wait for 25 ns;
+        s_hall_sensor <= '0'; wait for 8 ms; 
+        s_hall_sensor <= '1'; wait for 25 ns;
+        s_hall_sensor <= '0'; wait for 8 ms; 
+        s_hall_sensor <= '1'; wait for 25 ns;
+        s_hall_sensor <= '0'; wait for 8 ms; 
+        s_hall_sensor <= '1'; wait for 25 ns;
+        s_hall_sensor <= '0'; wait for 8 ms; 
+        s_hall_sensor <= '1'; wait for 25 ns;
+        s_hall_sensor <= '0'; wait for 8 ms; 
+        s_hall_sensor <= '1'; wait for 25 ns;
+        s_hall_sensor <= '0'; 
+        wait for 5 ms; 
+        
+        s_hall_sensor <= '1'; wait for 15 ns;
+        s_hall_sensor <= '0'; wait for 5 ms; 
+        s_hall_sensor <= '1'; wait for 15 ns;
+        s_hall_sensor <= '0'; wait for 5 ms; 
+        s_hall_sensor <= '1'; wait for 15 ns;
+        s_hall_sensor <= '0'; wait for 5 ms; 
+        s_hall_sensor <= '1'; wait for 15 ns;
+        s_hall_sensor <= '0'; wait for 5 ms; 
+        s_hall_sensor <= '1'; wait for 15 ns;
+        s_hall_sensor <= '0'; wait for 5 ms; 
+        s_hall_sensor <= '1'; wait for 15 ns;
+        s_hall_sensor <= '0'; wait for 5 ms; 
+        s_hall_sensor <= '1'; wait for 15 ns;
+        s_hall_sensor <= '0'; wait for 5 ms; 
+        s_hall_sensor <= '1'; wait for 15 ns;
+        s_hall_sensor <= '0'; wait for 5 ms; 
+        s_hall_sensor <= '1'; wait for 15 ns;
+        s_hall_sensor <= '0'; wait for 5 ms; 
+        s_hall_sensor <= '1'; wait for 15 ns;
+        s_hall_sensor <= '0'; wait for 5 ms; 
+        s_hall_sensor <= '1'; wait for 15 ns;
+        s_hall_sensor <= '0'; wait for 5 ms; 
+        s_hall_sensor <= '1'; wait for 15 ns;
+        s_hall_sensor <= '0'; 
+         wait for 5 ms; 
+         
+       
+         
+        
+            
+        report "Stimulus process finished" severity note;
+    end process p_stimulus;
+
+end Behavioral;
+```
+### Simulation  `tb_hall_sensor `
+![](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/hall%20sensor%20all.png)
+![](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/hall%20sensor%20part.png)
+### (2).test `tb_driver `
+```vhdl
+----------------------------------------------------------------------------------
+--tb_driver
+----------------------------------------------------------------------------------
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+------------------------------------------------------------------------
+-- Entity declaration for testbench
+------------------------------------------------------------------------
+entity tb_driver is
+    -- Entity of testbench is always empty
+end entity tb_driver;
+
+------------------------------------------------------------------------
+-- Architecture body for testbench
+------------------------------------------------------------------------
+architecture testbench of tb_driver is
+
+    -- Local constants
+    constant c_CLK_100MHZ_PERIOD : time    := 10 ns;
+
+    --Local signals
+    signal s_clk_100MHz : std_logic;
+     -- signal s_clk
+            
+    signal s_reset      : std_logic;    
+    signal s_dp_i       : std_logic_vector(4 - 1 downto 0);
+    signal s_seg_o      : std_logic_vector(7 - 1 downto 0);
+    signal s_dig        : std_logic_vector(4 - 1 downto 0);
+    signal s_dp_o       : std_logic;
+    signal s_decimal    : integer range 0 to 9999;
+    
+begin
+    -- Connecting testbench signals with driver_7seg_4digits entity
+    -- (Unit Under Test)
+    --- WRITE YOUR CODE HERE
+        
+    uut_driver_7seg_4digits : entity work.driver_7seg
+        port map(
+            clk   => s_clk_100MHz,
+            reset => s_reset,
+            dp_i  => s_dp_i,
+            dp_o  => s_dp_o,
+            seg_o => s_seg_o,
+            dig_o => s_dig,
+            
+            decimal => s_decimal
+        );
+
+    --------------------------------------------------------------------
+    -- Clock generation process
+    --------------------------------------------------------------------
+    p_clk_gen : process
+    begin
+        while now < 5 ms loop         -- 75 periods of 100MHz clock
+            s_clk_100MHz <= '0';
+            wait for c_CLK_100MHZ_PERIOD / 2;
+            s_clk_100MHz <= '1';
+            wait for c_CLK_100MHZ_PERIOD / 2;
+        end loop;
+        wait;
+    end process p_clk_gen;
+
+    --------------------------------------------------------------------
+    -- Reset generation process
+    --------------------------------------------------------------------
+    p_reset_gen : process
+    begin
+        -- Reset deactivated   
+        s_reset <= '0';
+        wait for 60 ns;
+     
+        -- Reset activated
+        s_reset <= '1';
+        wait for 15 ns;
+        -- Reset deactivated
+        s_reset <= '0';
+        wait;
+        
+    end process p_reset_gen;
+
+    --------------------------------------------------------------------
+    -- Data generation process
+    --------------------------------------------------------------------
+    p_stimulus : process
+    begin
+        report "Stimulus process started" severity note;
+        
+
+        report "Stimulus process finished" severity note;
+        wait;
+    end process p_stimulus;
+end architecture testbench;
+
+```
+### Simulation  `tb_driver `
+### (3).test `tb_top `
+```vhdl
+----------------------------------------------------------------------------------
+-- tb_top
+----------------------------------------------------------------------------------
+
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+--use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx leaf cells in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
+entity tb_top is
+--  Port ( );
+end tb_top;
+
+architecture Behavioral of tb_top is
+
+    -- Local constants
+    constant c_CLK_100MHZ_PERIOD : time    := 10 ns;
+
+    --Local signals
+    signal s_clk_100MHz  : std_logic;
+            
+    signal s_reset       : std_logic;
+    signal s_mode        : std_logic;
+    signal s_dis_reset   : std_logic;
+    
+    signal s_dp_i        : std_logic_vector(4 - 1 downto 0);
+    signal s_dp_o        : std_logic;
+    signal s_seg_o       : std_logic_vector(7 - 1 downto 0);
+    signal s_dig         : std_logic_vector(4 - 1 downto 0);
+    
+    signal s_number     : integer range 0 to 9999;
+    
+    signal s_hall        : std_logic;
+
+begin
+
+    -- Connecting testbench signals with driver_7seg_4digits entity
+    uut_driver_7seg: entity work.driver_7seg
+        port map(
+            clk => s_clk_100MHz,
+            reset => s_reset,
+
+            dp_i => "1110",
+
+            dp_o  => s_dp_o,
+            seg_o => s_seg_o,
+            dig_o => s_dig,
+            
+            decimal => s_number
+        );
+      
+    -- Connecting testbench signals with hall entity  
+    uut_hall : entity work.hall_sensor
+        port map(
+            clk => s_clk_100MHz,
+            
+            hall_sensor      => s_hall,
+            wheel            => 250,              --250cm
+            button_mod       => s_mode,
+            button_reset     => s_dis_reset,
+            
+            output_o => s_number
+        );
+
+    --------------------------------------------------------------------
+    -- Clock generation process
+    --------------------------------------------------------------------
+    p_clk_gen : process
+    begin
+        while now < 2000 ms loop         -- 75 periods of 100MHz clock
+            s_clk_100MHz <= '0';
+            wait for c_CLK_100MHZ_PERIOD / 2;
+            s_clk_100MHz <= '1';
+            wait for c_CLK_100MHZ_PERIOD / 2;
+        end loop;
+        wait;
+    end process p_clk_gen;
+
+    --------------------------------------------------------------------
+    -- Reset generation process
+    --------------------------------------------------------------------
+    p_reset_gen : process
+    begin
+        s_reset <= '0';
+        wait for 28 ns;
+        
+        -- Reset activated
+        s_reset <= '1';
+        wait for 53 ns;
+
+        s_reset <= '0';
+        wait;
+        
+    end process p_reset_gen;
+    
+    --------------------------------------------------------------------
+    -- Data generation process
+    --------------------------------------------------------------------
+      p_stimulus : process
+    begin
+        report "Stimulus process started" severity note;
+
+        -- reset all local signals
+        s_hall <= '0';
+        s_mode <= '0';
+        s_dis_reset <= '0';
+        wait for 20 ns;
+
+       --set speed 
+        while(now < 70 ms) loop
+            
+            s_hall <= '1';
+            wait for 35 ns;
+            s_hall <= '0';
+            wait for 4 ms;
+            
+        end loop; 
+        
+        -- change mode
+        s_mode <= '1';
+        wait for 25 ns;
+        s_mode <= '0';
+        
+      
+        while(now < 800 ms) loop
+            
+            s_hall <= '1';
+            wait for 50 ns;
+            s_hall <= '0';
+            wait for 7 ms;
+            
+        end loop; 
+        
+        -- change mode
+        s_mode <= '1';
+        wait for 20 ns;
+        s_mode <= '0';
+        
+        -- set speed
+        while(now < 100 ms) loop
+            
+            s_hall <= '1';
+            wait for 40 ns;
+            s_hall <= '0';
+            wait for 8 ms;
+            
+        end loop;
+        
+       
+        s_dis_reset <= '1';
+        wait for 25 ns;
+        s_dis_reset <= '0';
+        
+        --set speed
+        while(now < 150 ms) loop
+            
+            s_hall <= '1';
+            wait for 20 ns;
+            s_hall <= '0';
+            wait for 4 ms;
+            
+        end loop;
+         
+      
+        s_hall <= '1';
+        wait for 30 ns;
+        s_hall <= '0';
+        wait for 10 ms;
+        
+
+        report "Stimulus process finished" severity note;
+        wait;
+    end process p_stimulus;
+
+end Behavioral;
+
+```
+### Simulation  `tb_top `
+![](https://github.com/SamuelBartko/DE1-Project/blob/main/Images/test%20top.png)
+ 
+### Schematic of the Top module
+
+![TOP](Images/top.png)
+
+
+
 
 ### Screenshot with simulated time waveforms
 
