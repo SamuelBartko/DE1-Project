@@ -1078,7 +1078,6 @@ And we can add function that will display burned calories. It would be counted f
 ## Video
 [Our video Link](https://www.youtube.com/watch?v=-a7UKXwctU4)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-a7UKXwctU4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ## References
 Most of the things we learned from the exercises from Digital Electronics 1.
 ---------------------------------------------------------------------------------
